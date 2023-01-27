@@ -1,3 +1,3 @@
-# h5-demos
+# demo
 
 h5 demos
