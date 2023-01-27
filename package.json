@@ -1,0 +1,22 @@
+{
+  "name": "h5-demos",
+  "version": "0.0.1",
+  "description": "h5 demos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvdengming/h5-demos.git"
+  },
+  "keywords": [
+    "h5"
+  ],
+  "author": "lvdengming",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lvdengming/h5-demos/issues"
+  },
+  "homepage": "https://github.com/lvdengming/h5-demos#readme"
+}
