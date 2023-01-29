@@ -79,6 +79,8 @@ aside .right-button {
   width: 30px;
   height: 60px;
   background-color: #fff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   transform: translateY(-50%);
 }
 
