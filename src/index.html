@@ -6,7 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>h5 demos</title>
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./style/aside.css">
+  <link rel="stylesheet" href="./style/main.css">
+  <style>
+    :root {
+      --border-color: #dcdfe6;
+      --primary-font-color: #303133;
+      --regular-font-color: #606266;
+      --primary-bg-color: #5a9cf8;
+      --shadow-color: rgba(0, 0, 0, .12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 
 <body>
@@ -51,7 +67,25 @@
       </svg>
     </div>
   </aside>
-  <article>内容</article>
+
+  <main>
+    <div class="loading">
+      <div class="sun">
+        <div class="sun-body">
+          <div class="line" style="--i: 1"></div>
+          <div class="line" style="--i: 2"></div>
+          <div class="line" style="--i: 3"></div>
+          <div class="line" style="--i: 4"></div>
+          <div class="line" style="--i: 5"></div>
+          <div class="line" style="--i: 6"></div>
+          <div class="line" style="--i: 7"></div>
+          <div class="line" style="--i: 8"></div>
+        </div>
+        <div class="eye"></div>
+      </div>
+      <div class="horizon"></div>
+    </div>
+  </main>
 </body>
 
 </html>
