@@ -1,7 +1,7 @@
 #loading-wrapper {
   --light-color: #f4c042;
   --dark-color: #7a5600;
-  --animation-style: 2.7s linear infinite;
+  --animation-style: 4.5s linear infinite;
 
   display: flex;
   justify-content: center;
@@ -93,49 +93,105 @@
 }
 
 @keyframes sun {
+  /* 默认值，可以不写，方便理解 */
   0% {
     transform: translateY(0);
   }
 
-  40%,
-  70% {
+  25% {
     transform: translateY(-40px);
+  }
+
+  /* 保持太阳旋转后状态一点时间（原 75%） */
+  80% {
+    transform: translateY(-40px);
+  }
+
+  /* 默认值，可以不写，方便理解 */
+  100% {
+    transform: translateY(0);
   }
 }
 
 @keyframes sun-body {
-  40% {
+  /* 默认值，可以不写，方便理解 */
+  0% {
     transform: rotate(0);
   }
 
-  50%,
-  100% {
+  25% {
+    transform: rotate(0);
+  }
+
+  35% {
     transform: rotate(45deg);
+  }
+
+  65% {
+    transform: rotate(45deg);
+  }
+
+  75% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(90deg);
   }
 }
 
 @keyframes eye {
-  50%,
-  60% {
+  /* 默认值，可以不写，方便理解 */
+  0% {
     transform: scaleY(1);
   }
 
-  55% {
+  35% {
+    transform: scaleY(1);
+  }
+
+  40% {
     transform: scaleY(0.1);
   }
 
-  70%,
+  45% {
+    transform: translateX(0) scaleY(1);
+  }
+
+  55% {
+    transform: translateX(34px) scaleY(1);
+  }
+
+  60% {
+    transform: translateX(34px) scaleY(0.1);
+  }
+
+  65% {
+    transform: translateX(34px) scaleY(1);
+  }
+
+  /* 默认值，可以不写，方便理解 */
   100% {
-    transform: translateX(34px);
+    transform: translateX(34px) scaleY(1);
   }
 }
 
 @keyframes text {
-  40% {
+  /* 默认值，可以不写，方便理解 */
+  0% {
     opacity: 1;
   }
-  
-  60% {
+
+  40% {
     opacity: 0;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  /* 默认值，可以不写，方便理解 */
+  100% {
+    opacity: 1;
   }
 }
