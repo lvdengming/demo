@@ -1,0 +1,13 @@
+:root {
+  --border-color: #dcdfe6;
+  --primary-font-color: #303133;
+  --regular-font-color: #606266;
+  --primary-bg-color: #5a9cf8;
+  --shadow-color: rgba(0, 0, 0, .12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
