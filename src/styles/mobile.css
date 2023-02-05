@@ -8,14 +8,6 @@
     max-width: 2rem;
   }
 
-  aside:active {
-    left: 0;
-  }
-
-  aside .content {
-    padding: 1px 0;
-  }
-
   /* 适配 safari */
   aside .content .demo-item {
     box-shadow: 0 0 5px rgba(200, 200, 200, .12);
