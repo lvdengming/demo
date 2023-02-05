@@ -36,7 +36,7 @@ aside .content .demo-item {
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: pointer;
-  filter: drop-shadow(0 0 3px var(--shadow-color));
+  filter: drop-shadow(0 0 5px var(--shadow-color));
 }
 
 aside .content .demo-item.active {
@@ -69,4 +69,9 @@ aside .right-button {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   transform: translateY(-50%);
+}
+
+/* 适配 safari */
+aside .right-button img {
+  width: 100%;
 }
