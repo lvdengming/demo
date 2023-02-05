@@ -1,0 +1,9 @@
+main {
+  height: 100vh;
+}
+
+#demo-view {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
