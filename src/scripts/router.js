@@ -1,11 +1,11 @@
 export const routes = [
   {
-    title: '01_太阳加载动画',
+    title: '太阳加载动画',
     path: 'sun-loading',
     src: 'src/pages/01_太阳加载动画'
   },
   {
-    title: '02_自定义右键菜单',
+    title: '自定义右键菜单',
     path: 'popup-menus',
     src: 'src/pages/02_自定义右键菜单'
   },
