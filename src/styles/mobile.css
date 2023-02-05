@@ -1,0 +1,14 @@
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: 100px;
+  }
+
+  aside .right-button {
+    width: .3rem;
+    height: .6rem;
+  }
+
+  aside .right-button img {
+    width: 100%;
+  }
+}
