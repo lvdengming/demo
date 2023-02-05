@@ -3,6 +3,11 @@
     font-size: 100px;
   }
 
+  aside {
+    width: 50vw;
+    max-width: 2rem;
+  }
+
   aside .right-button {
     width: .3rem;
     height: .6rem;
@@ -11,4 +16,6 @@
   aside .right-button img {
     width: 100%;
   }
+
+  iframe:hover {}
 }
