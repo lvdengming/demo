@@ -10,6 +10,11 @@ export const routes = [
     src: 'src/pages/02_自定义右键菜单'
   },
   {
+    title: '转圈加载动画',
+    path: 'rotate-loading',
+    src: 'src/pages/03_转圈加载动画'
+  },
+  {
     title: '美团',
     path: 'meituan',
     src: 'https://cd.meituan.com/'

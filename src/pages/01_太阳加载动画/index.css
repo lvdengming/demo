@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('../../styles/init.css');
 
 #loading {
   --light-color: #f4c042;
