@@ -1,5 +1,80 @@
 @import url('../../styles/init.css');
 
+#context-menu {
+  display: none;
+  position: fixed;
+  width: 130px;
+  height: 262px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #03081a;
+  font-family: SFUIText,PingFangSC-Regular,Helvetica Neue,Helvetica,Arial,sans-serif;
+  filter: drop-shadow(0 1px 6px rgba(0, 0, 0, .2));
+  z-index: 1;
+}
+
+#context-menu .separate-line {
+  height: 1px;
+  background-color: var(--border-color-1);
+}
+
+#context-menu .menu-item {
+  height: 30px;
+  padding-left: 12px;
+  line-height: 30px;
+  user-select: none;
+  cursor: pointer;
+}
+
+#context-menu .menu-item:hover {
+  background-color: var(--border-color-1);
+}
+
+#context-menu i {
+  font-size: 14px;
+  font-style: normal;
+  font-family: union-design-icons !important;
+}
+
+#context-menu .icon-download::before {
+  content: '\E69A';
+}
+
+#context-menu .icon-share::before {
+  content: '\E647';
+}
+
+#context-menu .icon-common::before {
+  content: '\E608';
+}
+
+#context-menu .icon-copy::before {
+  content: '\E646';
+}
+
+#context-menu .icon-move::before {
+  content: '\E61D';
+}
+
+#context-menu .icon-rename::before {
+  content: '\E637';
+}
+
+#context-menu .icon-remove::before {
+  content: '\E6BE';
+}
+
+#context-menu span {
+  margin-left: 8px;
+}
+
+#context-menu .no-icon span {
+  margin-left: 0;
+}
+
 #mobile-info {
   display: none;
   height: 50px;
