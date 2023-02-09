@@ -57,10 +57,9 @@ function handleMenuItemClick(event) {
   const directory = contextMenu.display.target;
   const directoryName = directory.querySelector('span').innerText;
   const operation = target.querySelector('span').innerText;
-  const description = `${operation} -> ${directoryName}`;
+  const description = `action: ${operation}${directoryName}`;
 
   console.log(description);
-  window.alert(description);
 }
 
 // 移动端不展示内容
