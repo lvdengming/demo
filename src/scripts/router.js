@@ -34,4 +34,4 @@ export const routes = [
 export const router = {
   mode: 'hash',
   routes
-}
+};
