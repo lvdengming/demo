@@ -1,0 +1,94 @@
+:root {
+  --width: 100px;
+  --height: 45px;
+  --border-radius: 10px;
+  --border-size: 2px;
+  --span-size: 20px;
+  --color-button: #659ff0;
+  --color-border: #cdcdcd;
+  --color-page: #2b2d2f;
+  --color-top: #d75442;
+  --color-right: #55a258;
+  --color-bottom: #f2c043;
+  --color-left: #447de6;
+  --time-slow: 3s;
+  --time-fast: 1s;
+}
+
+body,
+div {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--color-page);
+}
+
+.activate {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  background-color: var(--color-button);
+  border: var(--border-size) solid var(--color-border);
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: var(--height);
+  cursor: pointer;
+  transition: all .1s;
+}
+
+.activate:hover {
+  box-shadow: 0 0 var(--span-size) var(--color-button);
+}
+
+.activate::before,
+.activate::after {
+  content: '';
+  position: absolute;
+  inset: calc(0px - var(--span-size));
+  border: var(--border-size) solid var(--color-top);
+  border-radius: var(--border-radius);
+  animation: dynamic var(--time-slow) linear infinite;
+}
+
+.activate::before {
+  animation-delay: calc(0s - var(--time-slow) / 2);
+}
+
+.activate:hover::before,
+.activate:hover::after {
+  animation-duration: var(--time-fast);
+}
+
+.activate:hover::before {
+  animation-delay: calc(0s - var(--time-fast) / 2);
+}
+
+@keyframes dynamic {
+  0%,
+  100% {
+    clip-path: inset(0 0 calc(2 * var(--span-size) + var(--height) - var(--border-size)) 0);
+    border-color: var(--color-top);
+  }
+
+  25% {
+    clip-path: inset(0 0 0 calc(2 * var(--span-size) + var(--width) - var(--border-size)));
+    border-color: var(--color-right);
+  }
+
+  50% {
+    clip-path: inset(calc(2 * var(--span-size) + var(--height) - var(--border-size)) 0 0 0);
+    border-color: var(--color-bottom);
+  }
+
+  75% {
+    clip-path: inset(0 calc(2 * var(--span-size) + var(--width) - var(--border-size)) 0 0);
+    border-color: var(--color-left);
+  }
+}

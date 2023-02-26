@@ -15,6 +15,11 @@ export const routes = [
     src: 'src/pages/02_自定义右键菜单'
   },
   {
+    title: '动效按钮',
+    path: 'dynamic-button',
+    src: 'src/pages/04_动效按钮'
+  },
+  {
     title: '美团',
     path: 'meituan',
     src: 'https://cd.meituan.com/'
