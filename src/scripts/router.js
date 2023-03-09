@@ -20,19 +20,9 @@ export const routes = [
     src: 'src/pages/04_动效按钮',
   },
   {
-    title: '美团',
-    path: 'meituan',
-    src: 'https://cd.meituan.com/',
-  },
-  {
-    title: '淘宝',
-    path: 'taobao',
-    src: 'https://www.taobao.com/',
-  },
-  {
-    title: '拼多多',
-    path: 'pingduoduo',
-    src: 'https://www.pinduoduo.com/',
+    title: '自定义滚动条',
+    path: 'scrollbar',
+    src: 'src/pages/05_自定义滚动条',
   },
 ];
 
