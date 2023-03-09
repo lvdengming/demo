@@ -4,6 +4,7 @@
   "description": "h5 demos",
   "main": "src/index.js",
   "scripts": {
+    "prepare": "husky install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,12 +12,52 @@
     "url": "git+https://github.com/lvdengming/demo.git"
   },
   "keywords": [
-    "h5"
+    "h5",
+    "demo"
   ],
   "author": "lvdengming",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lvdengming/demo/issues"
   },
-  "homepage": "https://github.com/lvdengming/demo#readme"
+  "homepage": "https://github.com/lvdengming/demo#readme",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{html,md}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "printWidth": 80,
+    "useTabs": false,
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "singleAttributePerLine": false,
+    "quoteProps": "as-needed"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"] 
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "eslint": "^8.35.0",
+    "stylelint": "^15.2.0",
+    "stylelint-config-standard": "^30.0.1",
+    "prettier": "2.8.4",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4"
+  }
 }

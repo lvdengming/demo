@@ -1,0 +1,5 @@
+# 此文件在直接使用 prettier 命令时生效，更多参考：https://prettier.io/docs/en/ignore.html
+
+**/.git
+**/.vscode
+**/node_modules
