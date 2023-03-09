@@ -1,4 +1,4 @@
-import { ClientStatus } from "./constant.js";
+import { ClientStatus } from './constant.js';
 
 export function queryClientStatus() {
   const mobileRegExp = /Mobi|Android|iPhone/i;
@@ -6,4 +6,4 @@ export function queryClientStatus() {
   return mobileRegExp.test(userAgent)
     ? ClientStatus.MOBILE
     : ClientStatus.NO_MOBILE;
-};
+}

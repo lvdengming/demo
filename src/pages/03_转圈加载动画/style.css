@@ -15,10 +15,10 @@
 
   width: var(--loading-size);
   height: var(--loading-size);
-  border: calc(var(--loading-size) * .15) solid var(--loading-color);
+  border: calc(var(--loading-size) * 0.15) solid var(--loading-color);
   border-right-color: transparent;
   border-radius: 50%;
-  animation: rotate .8s linear 0s infinite;
+  animation: rotate 0.8s linear 0s infinite;
 }
 
 @keyframes rotate {

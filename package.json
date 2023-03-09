@@ -48,7 +48,9 @@
     "extends": "stylelint-config-standard"
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"] 
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "devDependencies": {
     "husky": "^8.0.3",

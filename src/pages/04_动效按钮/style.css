@@ -40,7 +40,7 @@ body {
   text-align: center;
   line-height: var(--height);
   cursor: pointer;
-  transition: all .1s;
+  transition: all 0.1s;
 }
 
 .activate:hover {
@@ -73,22 +73,30 @@ body {
 @keyframes dynamic {
   0%,
   100% {
-    clip-path: inset(0 0 calc(2 * var(--span-size) + var(--height) - var(--border-size)) 0);
+    clip-path: inset(
+      0 0 calc(2 * var(--span-size) + var(--height) - var(--border-size)) 0
+    );
     border-color: var(--color-top);
   }
 
   25% {
-    clip-path: inset(0 0 0 calc(2 * var(--span-size) + var(--width) - var(--border-size)));
+    clip-path: inset(
+      0 0 0 calc(2 * var(--span-size) + var(--width) - var(--border-size))
+    );
     border-color: var(--color-right);
   }
 
   50% {
-    clip-path: inset(calc(2 * var(--span-size) + var(--height) - var(--border-size)) 0 0 0);
+    clip-path: inset(
+      calc(2 * var(--span-size) + var(--height) - var(--border-size)) 0 0 0
+    );
     border-color: var(--color-bottom);
   }
 
   75% {
-    clip-path: inset(0 calc(2 * var(--span-size) + var(--width) - var(--border-size)) 0 0);
+    clip-path: inset(
+      0 calc(2 * var(--span-size) + var(--width) - var(--border-size)) 0 0
+    );
     border-color: var(--color-left);
   }
 }

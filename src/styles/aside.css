@@ -6,7 +6,7 @@ aside {
   height: 100vh;
   background-color: #fff;
   filter: drop-shadow(0 0 5px var(--shadow-color));
-  transition: left .5s;
+  transition: left 0.5s;
 }
 
 aside:hover {

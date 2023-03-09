@@ -11,8 +11,9 @@
   border-radius: 6px;
   font-size: 12px;
   color: #03081a;
-  font-family: SFUIText,PingFangSC-Regular,Helvetica Neue,Helvetica,Arial,sans-serif;
-  filter: drop-shadow(0 1px 6px rgba(0, 0, 0, .2));
+  font-family: SFUIText, PingFangSC-Regular, 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+  filter: drop-shadow(0 1px 6px rgb(0 0 0 / 20%));
   z-index: 1;
 }
 
@@ -33,11 +34,13 @@
   background-color: var(--border-color-1);
 }
 
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
 #context-menu i {
   font-size: 14px;
   font-style: normal;
   font-family: union-design-icons !important;
 }
+/* stylelint-enable font-family-no-missing-generic-family-keyword */
 
 #context-menu .icon-download::before {
   content: '\E69A';
@@ -99,7 +102,8 @@
   border-radius: 5px;
   filter: drop-shadow(0 0 5px var(--shadow-color));
   margin: 100px auto;
-  font-family: SFUIText,PingFangSC-Regular,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: SFUIText, PingFangSC-Regular, 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
 }
 
 table {
@@ -138,7 +142,7 @@ table {
   display: flex;
   align-items: center;
   padding-left: 20px;
-  color: var(--table-file-name-color)
+  color: var(--table-file-name-color);
 }
 
 .file-name:hover {
@@ -150,6 +154,8 @@ table {
   height: 32px;
 }
 
+/* stylelint-disable no-descending-specificity */
 .file-name span {
   margin-left: 12px;
 }
+/* stylelint-enable no-descending-specificity */

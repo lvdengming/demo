@@ -1,100 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://nd-static.bdstatic.com/m-static/v20-main/home/css/chunk-vendors.fcbe9d94.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>自定义右键菜单</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://nd-static.bdstatic.com/m-static/v20-main/home/css/chunk-vendors.fcbe9d94.css">
-  <link rel="stylesheet" href="./style.css">
-  <title>自定义右键菜单</title>
-</head>
+  <body>
+    <section id="context-menu">
+      <div class="menu-item no-icon">
+        <span>打开</span>
+      </div>
+      <div class="menu-item">
+        <i class="icon-download"></i>
+        <span>下载</span>
+      </div>
+      <div class="menu-item">
+        <i class="icon-share"></i>
+        <span>分享</span>
+      </div>
+      <div class="menu-item">
+        <i class="icon-common"></i>
+        <span>共享</span>
+      </div>
+      <div class="separate-line"></div>
+      <div class="menu-item">
+        <i class="icon-copy"></i>
+        <span>复制</span>
+      </div>
+      <div class="menu-item">
+        <i class="icon-move"></i>
+        <span>移动</span>
+      </div>
+      <div class="menu-item">
+        <i class="icon-rename"></i>
+        <span>重命名</span>
+      </div>
+      <div class="separate-line"></div>
+      <div class="menu-item">
+        <i class="icon-remove"></i>
+        <span>删除</span>
+      </div>
+    </section>
 
-<body>
-  <section id="context-menu">
-    <div class="menu-item no-icon">
-      <span>打开</span>
-    </div>
-    <div class="menu-item">
-      <i class="icon-download"></i>
-      <span>下载</span>
-    </div>
-    <div class="menu-item">
-      <i class="icon-share"></i>
-      <span>分享</span>
-    </div>
-    <div class="menu-item">
-      <i class="icon-common"></i>
-      <span>共享</span>
-    </div>
-    <div class="separate-line"></div>
-    <div class="menu-item">
-      <i class="icon-copy"></i>
-      <span>复制</span>
-    </div>
-    <div class="menu-item">
-      <i class="icon-move"></i>
-      <span>移动</span>
-    </div>
-    <div class="menu-item">
-      <i class="icon-rename"></i>
-      <span>重命名</span>
-    </div>
-    <div class="separate-line"></div>
-    <div class="menu-item">
-      <i class="icon-remove"></i>
-      <span>删除</span>
-    </div>
-  </section>
+    <section id="mobile-info">
+      <span>请在电脑上查看</span>
+    </section>
 
-  <section id="mobile-info">
-    <span>请在电脑上查看</span>
-  </section>
+    <section id="content">
+      <table>
+        <colgroup>
+          <col width="45%" />
+          <col width="23%" />
+          <col width="22%" />
+        </colgroup>
+        <thead>
+          <tr class="table-head">
+            <th>文件名</th>
+            <th>修改时间</th>
+            <th>大小</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-row">
+            <td class="file-name">
+              <img src="" alt="file" />
+              <span>我的资源</span>
+            </td>
+            <td>2022-05-29 12:20</td>
+            <td>-</td>
+          </tr>
+          <tr class="table-row">
+            <td class="file-name">
+              <img src="" alt="file" />
+              <span>学习资源</span>
+            </td>
+            <td>2020-03-15 13:24</td>
+            <td>-</td>
+          </tr>
+          <tr class="table-row">
+            <td class="file-name">
+              <img src="" alt="file" />
+              <span>我的应用数据</span>
+            </td>
+            <td>2017-07-26 00:06</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-  <section id="content">
-    <table>
-      <colgroup>
-        <col width="45%">
-        <col width="23%">
-        <col width="22%">
-      </colgroup>
-      <thead>
-        <tr class="table-head">
-          <th>文件名</th>
-          <th>修改时间</th>
-          <th>大小</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="table-row">
-          <td class="file-name">
-            <img src="" alt="file">
-            <span>我的资源</span>
-          </td>
-          <td>2022-05-29 12:20</td>
-          <td>-</td>
-        </tr>
-        <tr class="table-row">
-          <td class="file-name">
-            <img src="" alt="file">
-            <span>学习资源</span>
-          </td>
-          <td>2020-03-15 13:24</td>
-          <td>-</td>
-        </tr>
-        <tr class="table-row">
-          <td class="file-name">
-            <img src="" alt="file">
-            <span>我的应用数据</span>
-          </td>
-          <td>2017-07-26 00:06</td>
-          <td>-</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <script type="module" src="./index.js" defer></script>
-</body>
-
+    <script type="module" src="./index.js" defer></script>
+  </body>
 </html>
