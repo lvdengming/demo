@@ -1,5 +1,8 @@
+import { debounce } from '../../scripts/util.js';
+
 let wrapper;
 let scrollbar;
+const hideScrollbar = debounce(() => (scrollbar.style.opacity = 0), 300);
 
 function handlePageLoad() {
   wrapper = document.querySelector('.x-scroll');
@@ -16,11 +19,15 @@ function handlePageLoad() {
 }
 
 function handleWrapperScroll(e) {
+  scrollbar.style.opacity = 1;
+
   const top = Math.round(
     (e.target.scrollTop / wrapper.scrollHeight) * wrapper.clientHeight +
       e.target.scrollTop
   );
   scrollbar.style.top = top + 'px';
+
+  hideScrollbar();
 }
 
 window.onload = handlePageLoad;
