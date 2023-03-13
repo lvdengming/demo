@@ -26,4 +26,20 @@ function throttle(fn, timeSpan) {
   };
 }
 
-export { queryClientStatus, debounce, throttle };
+function createViewInComputer() {
+  const section = document.createElement('section');
+  section.innerText = '请在电脑上查看';
+  section.style = `
+    display: grid;
+    place-items: center;
+    position: fixed;
+    inset: 0;
+    background-color: #fff;
+    font-size: 20px;
+    color: #303133;
+  `;
+
+  document.body.append(section);
+}
+
+export { queryClientStatus, debounce, throttle, createViewInComputer };

@@ -1,10 +1,20 @@
-import { debounce } from '../../scripts/util.js';
+import { ClientStatus } from '../../scripts/constant.js';
+import {
+  debounce,
+  queryClientStatus,
+  createViewInComputer,
+} from '../../scripts/util.js';
 
 let wrapper;
 let scrollbar;
 const hideScrollbar = debounce(() => (scrollbar.style.opacity = 0), 300);
 
 function handlePageLoad() {
+  if (queryClientStatus() === ClientStatus.MOBILE) {
+    createViewInComputer();
+    return;
+  }
+
   wrapper = document.querySelector('.x-scroll');
   wrapper.onscroll = handleWrapperScroll;
 
