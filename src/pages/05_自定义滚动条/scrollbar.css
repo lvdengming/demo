@@ -13,5 +13,6 @@
   right: 0;
   width: 5px;
   height: 100px;
-  background-color: rgb(222 111 98 / 50%);
+  background-color: rgb(106 154 241 / 50%);
+  border-radius: 5px;
 }

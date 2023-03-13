@@ -1,6 +1,3 @@
-// 滚动条上下边距
-const verticalSpan = 5;
-
 let wrapper;
 let scrollbar;
 
@@ -13,12 +10,15 @@ function handlePageLoad() {
   wrapper.append(scrollbar);
 
   const height = Math.round(
-    (wrapper.clientHeight / wrapper.scrollHeight) *
-      (wrapper.clientHeight - 2 * verticalSpan)
+    (wrapper.clientHeight / wrapper.scrollHeight) * wrapper.clientHeight
   );
-  scrollbar.style.top = height + verticalSpan + 'px';
+  scrollbar.style.height = height + 'px';
 }
 
-function handleWrapperScroll() {}
+function handleWrapperScroll(e) {
+  scrollbar.style.top = Math.round(
+    (e.scrollTop / wrapper.scrollHeight) * wrapper.clientHeight
+  );
+}
 
 window.onload = handlePageLoad;
