@@ -16,9 +16,11 @@ function handlePageLoad() {
 }
 
 function handleWrapperScroll(e) {
-  scrollbar.style.top = Math.round(
-    (e.scrollTop / wrapper.scrollHeight) * wrapper.clientHeight
+  const top = Math.round(
+    (e.target.scrollTop / wrapper.scrollHeight) * wrapper.clientHeight +
+      e.target.scrollTop
   );
+  scrollbar.style.top = top + 'px';
 }
 
 window.onload = handlePageLoad;
