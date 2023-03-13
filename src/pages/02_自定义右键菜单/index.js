@@ -1,4 +1,4 @@
-import { queryClientStatus } from '../../scripts/tools.js';
+import { queryClientStatus } from '../../scripts/util.js';
 import { ClientStatus, Display } from '../../scripts/constant.js';
 
 const IMG_SRC =

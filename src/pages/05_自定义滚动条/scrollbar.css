@@ -1,0 +1,17 @@
+.x-scroll {
+  position: relative;
+}
+
+/* 不显示默认滚动条 */
+.x-scroll::-webkit-scrollbar {
+  width: 0;
+}
+
+.x-scroll .x-scrollbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100px;
+  background-color: rgb(222 111 98 / 50%);
+}
