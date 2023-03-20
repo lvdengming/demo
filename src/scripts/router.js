@@ -10,6 +10,11 @@ export const routes = [
     src: 'src/pages/03_转圈加载动画',
   },
   {
+    title: '吃豆人动画',
+    path: 'eat-pea',
+    src: 'src/pages/06_吃豆人',
+  },
+  {
     title: '自定义右键菜单',
     path: 'popup-menus',
     src: 'src/pages/02_自定义右键菜单',
