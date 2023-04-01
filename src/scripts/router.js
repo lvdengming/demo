@@ -29,6 +29,11 @@ export const routes = [
     path: 'scrollbar',
     src: 'src/pages/05_自定义滚动条',
   },
+  {
+    title: '骨架屏',
+    path: 'skeleton',
+    src: 'src/pages/07_骨架屏',
+  },
 ];
 
 export const router = {

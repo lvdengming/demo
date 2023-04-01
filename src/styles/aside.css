@@ -37,6 +37,7 @@ aside .content .demo-item {
   overflow: hidden;
   cursor: pointer;
   filter: drop-shadow(0 0 5px var(--shadow-color));
+  transition: all 0.5s;
 }
 
 aside .content .demo-item.active {

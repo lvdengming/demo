@@ -1,0 +1,69 @@
+:root {
+  --border-color: #dcdfe6;
+  --span: 0.24rem;
+  --skeleton-color: #f0f2f5;
+  --skeleton-to-color: #e6e8eb;
+  --item-height: 0.2rem;
+  --item-span: 0.4rem;
+
+  font-size: 100px;
+}
+
+html,
+body,
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.skeleton {
+  width: 8rem;
+  padding: var(--span);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  margin: var(--span) auto;
+}
+
+.skeleton-item {
+  height: var(--item-height);
+  background-image: linear-gradient(
+    90deg,
+    var(--skeleton-color) 25%,
+    var(--skeleton-to-color) 37%,
+    var(--skeleton-color) 63%
+  );
+  background-size: 400% 100%;
+  border-radius: 5px;
+  margin-bottom: var(--item-span);
+  animation: skeleton-loading 1.4s ease infinite;
+}
+
+.skeleton-item:first-child {
+  width: 40%;
+}
+
+.skeleton-item:last-child {
+  width: 67%;
+  margin: 0;
+}
+
+@media screen and (width < 848px) {
+  .skeleton {
+    width: calc(100vw - 0.48rem);
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
