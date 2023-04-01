@@ -18,7 +18,7 @@ div {
 }
 
 body {
-  min-height: 100vh;
+  padding: var(--span) 0;
 }
 
 .skeleton {
@@ -26,7 +26,10 @@ body {
   padding: var(--span);
   border: 1px solid var(--border-color);
   border-radius: 5px;
-  margin: var(--span) auto;
+}
+
+.skeleton:last-child {
+  margin-top: var(--span);
 }
 
 .skeleton-item {
