@@ -3,8 +3,8 @@
   --span: 0.24rem;
   --skeleton-color: #f0f2f5;
   --skeleton-to-color: #e6e8eb;
-  --item-height: 0.2rem;
-  --item-span: 0.4rem;
+  --item-height: 0.24rem;
+  --item-span: 0.24rem;
 
   font-size: 100px;
 }
@@ -29,8 +29,8 @@ body {
   margin: 0 auto;
 }
 
-.skeleton:last-child {
-  margin-top: var(--span);
+.skeleton:first-child {
+  margin-bottom: var(--span);
 }
 
 .skeleton-item {
@@ -56,7 +56,7 @@ body {
   margin: 0;
 }
 
-@media screen and (width < 848px) {
+@media screen and (max-width: 848px) {
   .skeleton {
     width: calc(100vw - 0.48rem);
   }
