@@ -1,0 +1,12 @@
+html,
+body,
+div,
+section {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 100px;
+}
