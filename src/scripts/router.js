@@ -34,6 +34,11 @@ export const routes = [
     path: 'skeleton',
     src: 'src/pages/07_骨架屏',
   },
+  {
+    title: '抽签',
+    path: 'lot',
+    src: 'src/pages/08_抽签',
+  },
 ];
 
 export const router = {
