@@ -36,7 +36,7 @@ export const routes = [
   },
   {
     title: '抽签',
-    path: 'lot',
+    path: 'lottery',
     src: 'src/pages/08_抽签',
   },
 ];
