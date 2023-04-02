@@ -48,7 +48,6 @@
       src="https://cdn.sheetjs.com/xlsx-0.19.2/package/dist/xlsx.full.min.js"
     ></script>
     <script>
-      let fileName = '';
       const teams = [];
       const selectedTeams = [];
       const memebers = [];
@@ -70,7 +69,8 @@
 
       function handleInputChange(e) {
         const excel = e.target.files[0];
-        fileName = excel.name;
+        const fileNameEl = document.querySelector('.file-name');
+        fileNameEl.textContent = excel.name;
 
         const reader = new FileReader();
         reader.onload = function (e) {
