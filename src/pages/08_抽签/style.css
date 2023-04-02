@@ -30,12 +30,18 @@ section {
   margin: 50px auto;
 }
 
-/* .import-wrapper start */
-.import-wrapper {
+/* header start */
+header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: var(--padding-size);
   border-bottom: 1px solid var(--border-color);
+}
+
+.import-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .import {
@@ -69,7 +75,12 @@ section {
   color: #303133;
 }
 
-/* .import-wrapper end */
+a {
+  font-size: 16px;
+  float: right;
+}
+
+/* header end */
 
 /* .lottery-wrapper start */
 .lottery-wrapper {
