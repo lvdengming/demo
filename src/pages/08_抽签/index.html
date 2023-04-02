@@ -9,6 +9,31 @@
   </head>
 
   <body>
-    <h1>抽签案例</h1>
+    <div id="app">
+      <input
+        type="file"
+        id="import-excel"
+        accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      />
+    </div>
+    <!-- use xlsx.full.min.js from version 0.19.2 -->
+    <script
+      lang="javascript"
+      src="https://cdn.sheetjs.com/xlsx-0.19.2/package/dist/xlsx.full.min.js"
+    ></script>
+    <script>
+      function handleInputChange(e) {
+        const excel = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const data = e.target.result;
+          /* reader.readAsArrayBuffer(file) -> data will be an ArrayBuffer */
+          const workbook = XLSX.read(e.target.result);
+
+          console.log(workbook);
+        };
+        reader.readAsArrayBuffer(file);
+      }
+    </script>
   </body>
 </html>
