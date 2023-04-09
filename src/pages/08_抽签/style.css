@@ -8,6 +8,7 @@ section {
 }
 
 :root {
+  --content-width: 1024px;
   --border-color: #dcdfe6;
   --radius-size: 4px;
   --padding-size: 24px;
@@ -22,12 +23,18 @@ section {
     'Microsoft YaHei', Arial, sans-serif;
 }
 
+nav {
+  width: var(--content-width);
+  padding: 0 8px;
+  margin: 25px auto;
+}
+
 #app {
-  width: 1024px;
+  width: var(--content-width);
   min-height: 300px;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-size);
-  margin: 50px auto;
+  margin: 20px auto;
 }
 
 /* header start */

@@ -37,6 +37,7 @@ function createViewInComputer() {
     background-color: #fff;
     font-size: 20px;
     color: #303133;
+    z-index: 999;
   `;
 
   document.body.append(section);
