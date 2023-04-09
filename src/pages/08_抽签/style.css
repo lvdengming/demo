@@ -23,12 +23,6 @@ section {
     'Microsoft YaHei', Arial, sans-serif;
 }
 
-nav {
-  width: var(--content-width);
-  padding: 0 8px;
-  margin: 25px auto;
-}
-
 #app {
   width: var(--content-width);
   min-height: 300px;
@@ -182,3 +176,9 @@ a {
 }
 
 /* .lottery-wrapper end */
+
+footer {
+  width: var(--content-width);
+  padding: 0 8px;
+  margin: 25px auto;
+}
