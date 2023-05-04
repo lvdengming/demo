@@ -47,3 +47,11 @@ h1::after {
     opacity: 0;
   }
 }
+
+/* 移动端适配 */
+@media screen and (width <= 500px) {
+  h1 {
+    height: 35px;
+    font-size: 35px;
+  }
+}
