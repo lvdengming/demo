@@ -1,0 +1,49 @@
+html,
+body,
+h1 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  --bg-color: #0e1116;
+  --color: #e6edf3;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+h1 {
+  position: relative;
+  padding-right: 10px;
+  height: 50px;
+  font-size: 50px;
+  color: var(--color);
+  line-height: 1;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--color);
+  animation: fade-in-out 1.2s infinite;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}

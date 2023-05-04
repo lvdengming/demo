@@ -39,6 +39,11 @@ export const routes = [
     path: 'lottery',
     src: 'src/pages/08_抽签',
   },
+  {
+    title: '动态输入',
+    path: 'dynamic-input',
+    src: 'src/pages/09_动态输入文字',
+  },
 ];
 
 export const router = {
