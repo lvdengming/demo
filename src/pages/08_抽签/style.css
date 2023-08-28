@@ -2,183 +2,183 @@ html,
 body,
 div,
 section {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  --content-width: 1024px;
-  --border-color: #dcdfe6;
-  --radius-size: 4px;
-  --padding-size: 24px;
-  --color-primary: #5e9efb;
-  --color-primary-hover: #79bbff;
-  --color-danger: #e2756d;
-  --color-danger-hover: #e99d99;
+    --content-width: 1024px;
+    --border-color: #dcdfe6;
+    --radius-size: 4px;
+    --padding-size: 24px;
+    --color-primary: #5e9efb;
+    --color-primary-hover: #79bbff;
+    --color-danger: #e2756d;
+    --color-danger-hover: #e99d99;
 
-  font-size: 14px;
-  color: #303133;
-  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
-    'Microsoft YaHei', Arial, sans-serif;
+    font-size: 14px;
+    color: #303133;
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+        'Microsoft YaHei', Arial, sans-serif;
 }
 
 #app {
-  width: var(--content-width);
-  min-height: 300px;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-size);
-  margin: 20px auto;
+    width: var(--content-width);
+    min-height: 300px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-size);
+    margin: 20px auto;
 }
 
 /* header start */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--padding-size);
-  border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-size);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .import-wrapper {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .import {
-  position: relative;
-  display: inline-block;
-  height: 30px;
-  padding: 0 20px;
-  background-color: var(--color-primary);
-  border-radius: var(--radius-size);
-  color: #fff;
-  line-height: 30px;
-  cursor: pointer;
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    padding: 0 20px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-size);
+    color: #fff;
+    line-height: 30px;
+    cursor: pointer;
 }
 
 .import:hover {
-  background-color: var(--color-primary-hover);
+    background-color: var(--color-primary-hover);
 }
 
 #import-excel {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-size: 100px;
-  opacity: 0;
-  z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 100px;
+    opacity: 0;
+    z-index: 1;
 }
 
 .file-name {
-  margin-left: 20px;
-  font-size: 16px;
-  color: #303133;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #303133;
 }
 
 a {
-  font-size: 16px;
-  float: right;
+    font-size: 16px;
+    float: right;
 }
 
 /* header end */
 
 /* .lottery-wrapper start */
 .lottery-wrapper {
-  display: grid;
-  grid-template-areas: 'a b c';
-  grid-template-columns: 280px 1fr 280px;
-  padding: var(--padding-size);
+    display: grid;
+    grid-template-areas: 'a b c';
+    grid-template-columns: 280px 1fr 280px;
+    padding: var(--padding-size);
 }
 
 .lottery-wrapper > div {
-  border-right: 1px dashed #ccc;
+    border-right: 1px dashed #ccc;
 }
 
 .lottery-wrapper > div:last-child {
-  border: none;
+    border: none;
 }
 
 .teams {
-  padding-right: var(--padding-size);
+    padding-right: var(--padding-size);
 }
 
 .selected-teams {
-  padding-left: var(--padding-size);
+    padding-left: var(--padding-size);
 }
 
 .team-item {
-  padding: 15px;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-size);
-  margin-bottom: var(--padding-size);
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-size);
+    margin-bottom: var(--padding-size);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .team-item span {
-  margin-right: 16px;
-  font-size: 16px;
+    margin-right: 16px;
+    font-size: 16px;
 }
 
 .team-item span:last-child {
-  margin: 0;
+    margin: 0;
 }
 
 .lottery {
-  display: flex;
-  flex-direction: column;
-  padding: var(--padding-size);
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-size);
 }
 
 .buttons {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
 .buttons > div {
-  width: 80px;
-  height: 32px;
-  border-radius: var(--radius-size);
-  color: #fff;
-  text-align: center;
-  line-height: 32px;
-  cursor: pointer;
+    width: 80px;
+    height: 32px;
+    border-radius: var(--radius-size);
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
 }
 
 .buttons .start {
-  background-color: var(--color-primary);
+    background-color: var(--color-primary);
 }
 
 .buttons .start:hover {
-  background-color: var(--color-primary-hover);
+    background-color: var(--color-primary-hover);
 }
 
 .buttons .stop {
-  background-color: var(--color-danger);
-  margin-left: var(--padding-size);
+    background-color: var(--color-danger);
+    margin-left: var(--padding-size);
 }
 
 .buttons .stop:hover {
-  background-color: var(--color-danger-hover);
+    background-color: var(--color-danger-hover);
 }
 
 .lottery h1 {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  font-size: 80px;
-  color: #303133;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 80px;
+    color: #303133;
 }
 
 /* .lottery-wrapper end */
 
 footer {
-  width: var(--content-width);
-  padding: 0 8px;
-  margin: 25px auto;
+    width: var(--content-width);
+    padding: 0 8px;
+    margin: 25px auto;
 }

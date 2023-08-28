@@ -1,203 +1,203 @@
 @import url('../../styles/init.css');
 
 #loading {
-  --light-color: #f4c042;
-  --dark-color: #7a5600;
-  --animation-style: 4.5s linear infinite;
+    --light-color: #f4c042;
+    --dark-color: #7a5600;
+    --animation-style: 4.5s linear infinite;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: var(--light-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light-color);
 }
 
 #loading .loading-content {
-  position: relative;
-  width: 300px;
-  height: 300px;
+    position: relative;
+    width: 300px;
+    height: 300px;
 }
 
 #loading .sun {
-  position: absolute;
-  top: 135px;
-  left: 82px;
-  width: 136px;
-  height: 136px;
-  animation: sun var(--animation-style);
+    position: absolute;
+    top: 135px;
+    left: 82px;
+    width: 136px;
+    height: 136px;
+    animation: sun var(--animation-style);
 }
 
 #loading .sun-body {
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 6px solid var(--dark-color);
-  animation: sun-body var(--animation-style);
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 6px solid var(--dark-color);
+    animation: sun-body var(--animation-style);
 }
 
 #loading .line {
-  position: absolute;
-  top: -24px;
-  left: calc(50% - 3px);
-  width: 6px;
-  height: 12px;
-  border-radius: 3px;
-  background-color: var(--dark-color);
-  transform: rotate(calc(var(--i) * 45deg));
-  transform-origin: center 68px;
+    position: absolute;
+    top: -24px;
+    left: calc(50% - 3px);
+    width: 6px;
+    height: 12px;
+    border-radius: 3px;
+    background-color: var(--dark-color);
+    transform: rotate(calc(var(--i) * 45deg));
+    transform-origin: center 68px;
 }
 
 #loading .eye {
-  position: absolute;
-  top: 60px;
-  left: 40px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--dark-color);
-  box-shadow: 16px 0 var(--dark-color);
-  animation: eye var(--animation-style);
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--dark-color);
+    box-shadow: 16px 0 var(--dark-color);
+    animation: eye var(--animation-style);
 }
 
 /* 水平线 */
 #loading .horizon {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 115px;
-  background-color: var(--light-color);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 115px;
+    background-color: var(--light-color);
 }
 
 /* 水平线 */
 #loading .horizon::before {
-  content: '';
-  position: absolute;
-  left: 5%;
-  width: 90%;
-  height: 6px;
-  border-radius: 3px;
-  background-color: var(--dark-color);
+    content: '';
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 6px;
+    border-radius: 3px;
+    background-color: var(--dark-color);
 }
 
 /* loading 文案 */
 #loading .horizon::after {
-  content: 'Loading...';
-  position: absolute;
-  top: 30px;
-  width: 100%;
-  text-align: center;
-  font-size: 25px;
-  color: var(--dark-color);
-  animation: text var(--animation-style);
+    content: 'Loading...';
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    color: var(--dark-color);
+    animation: text var(--animation-style);
 }
 
 @keyframes sun {
-  /* 默认值，可以不写，方便理解 */
-  0% {
-    transform: translateY(0);
-  }
+    /* 默认值，可以不写，方便理解 */
+    0% {
+        transform: translateY(0);
+    }
 
-  25% {
-    transform: translateY(-40px);
-  }
+    25% {
+        transform: translateY(-40px);
+    }
 
-  /* 保持太阳旋转后状态一点时间（原 75%） */
-  80% {
-    transform: translateY(-40px);
-  }
+    /* 保持太阳旋转后状态一点时间（原 75%） */
+    80% {
+        transform: translateY(-40px);
+    }
 
-  /* 默认值，可以不写，方便理解 */
-  100% {
-    transform: translateY(0);
-  }
+    /* 默认值，可以不写，方便理解 */
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @keyframes sun-body {
-  /* 默认值，可以不写，方便理解 */
-  0% {
-    transform: rotate(0);
-  }
+    /* 默认值，可以不写，方便理解 */
+    0% {
+        transform: rotate(0);
+    }
 
-  25% {
-    transform: rotate(0);
-  }
+    25% {
+        transform: rotate(0);
+    }
 
-  35% {
-    transform: rotate(45deg);
-  }
+    35% {
+        transform: rotate(45deg);
+    }
 
-  65% {
-    transform: rotate(45deg);
-  }
+    65% {
+        transform: rotate(45deg);
+    }
 
-  75% {
-    transform: rotate(90deg);
-  }
+    75% {
+        transform: rotate(90deg);
+    }
 
-  100% {
-    transform: rotate(90deg);
-  }
+    100% {
+        transform: rotate(90deg);
+    }
 }
 
 @keyframes eye {
-  /* 默认值，可以不写，方便理解 */
-  0% {
-    transform: scaleY(1);
-  }
+    /* 默认值，可以不写，方便理解 */
+    0% {
+        transform: scaleY(1);
+    }
 
-  35% {
-    transform: scaleY(1);
-  }
+    35% {
+        transform: scaleY(1);
+    }
 
-  40% {
-    transform: scaleY(0.1);
-  }
+    40% {
+        transform: scaleY(0.1);
+    }
 
-  45% {
-    transform: translateX(0) scaleY(1);
-  }
+    45% {
+        transform: translateX(0) scaleY(1);
+    }
 
-  55% {
-    transform: translateX(34px) scaleY(1);
-  }
+    55% {
+        transform: translateX(34px) scaleY(1);
+    }
 
-  60% {
-    transform: translateX(34px) scaleY(0.1);
-  }
+    60% {
+        transform: translateX(34px) scaleY(0.1);
+    }
 
-  65% {
-    transform: translateX(34px) scaleY(1);
-  }
+    65% {
+        transform: translateX(34px) scaleY(1);
+    }
 
-  /* 默认值，可以不写，方便理解 */
-  100% {
-    transform: translateX(34px) scaleY(1);
-  }
+    /* 默认值，可以不写，方便理解 */
+    100% {
+        transform: translateX(34px) scaleY(1);
+    }
 }
 
 @keyframes text {
-  /* 默认值，可以不写，方便理解 */
-  0% {
-    opacity: 1;
-  }
+    /* 默认值，可以不写，方便理解 */
+    0% {
+        opacity: 1;
+    }
 
-  40% {
-    opacity: 0;
-  }
+    40% {
+        opacity: 0;
+    }
 
-  80% {
-    opacity: 1;
-  }
+    80% {
+        opacity: 1;
+    }
 
-  /* 默认值，可以不写，方便理解 */
-  100% {
-    opacity: 1;
-  }
+    /* 默认值，可以不写，方便理解 */
+    100% {
+        opacity: 1;
+    }
 }

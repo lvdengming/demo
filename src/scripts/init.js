@@ -10,82 +10,82 @@ const HASH_PREFFIX = '#/';
 
 const demoItems = [];
 const iframe = new Proxy(
-  {},
-  {
-    set(target, property, newValue, receiver) {
-      if (property === 'src') {
-        receiver.loading = true;
-        iframeElement.setAttribute('src', newValue);
-      } else if (property === 'loading') {
-        const loading = document.getElementById(LOADING_ID);
-        if (newValue) {
-          loading.classList.add(ACTIVE_CLASS);
-        } else {
-          loading.classList.remove(ACTIVE_CLASS);
-        }
-      }
+    {},
+    {
+        set(target, property, newValue, receiver) {
+            if (property === 'src') {
+                receiver.loading = true;
+                iframeElement.setAttribute('src', newValue);
+            } else if (property === 'loading') {
+                const loading = document.getElementById(LOADING_ID);
+                if (newValue) {
+                    loading.classList.add(ACTIVE_CLASS);
+                } else {
+                    loading.classList.remove(ACTIVE_CLASS);
+                }
+            }
 
-      target[property] = newValue;
-      return true;
-    },
-  }
+            target[property] = newValue;
+            return true;
+        },
+    }
 );
 
 let prevItem;
 let iframeElement;
 
 function handlePageLoad() {
-  for (const route of routes) {
-    const item = document.createElement('div');
-    item.classList.add(DEMO_ITEM_CLASS);
-    item.setAttribute(PATH_ATTRIBUTE, route.path);
-    item.innerText = route.title;
-    item.addEventListener('click', handleItemClick);
-    demoItems.push(item);
-  }
+    for (const route of routes) {
+        const item = document.createElement('div');
+        item.classList.add(DEMO_ITEM_CLASS);
+        item.setAttribute(PATH_ATTRIBUTE, route.path);
+        item.innerText = route.title;
+        item.addEventListener('click', handleItemClick);
+        demoItems.push(item);
+    }
 
-  const demoContainer = document.querySelector(DEMO_CONTAINER_SELECTOR);
-  demoContainer.append(...demoItems);
-  iframeElement = document.getElementById(IFRAME_ID);
-  iframeElement.onload = handleIFrameLoad;
+    const demoContainer = document.querySelector(DEMO_CONTAINER_SELECTOR);
+    demoContainer.append(...demoItems);
+    iframeElement = document.getElementById(IFRAME_ID);
+    iframeElement.onload = handleIFrameLoad;
 
-  handleHashChange();
+    handleHashChange();
 }
 
 function handleHashChange() {
-  let path = location.hash.slice(HASH_PREFFIX.length);
-  let index = routes.findIndex((route) => route.path === path);
+    let path = location.hash.slice(HASH_PREFFIX.length);
+    let index = routes.findIndex((route) => route.path === path);
 
-  path = index > -1 ? path : routes[0].path;
-  index = index > -1 ? index : 0;
+    path = index > -1 ? path : routes[0].path;
+    index = index > -1 ? index : 0;
 
-  location.hash = HASH_PREFFIX + path;
-  iframe.src = routes[index].src;
+    location.hash = HASH_PREFFIX + path;
+    iframe.src = routes[index].src;
 
-  if (prevItem) {
-    prevItem.classList.remove(ACTIVE_CLASS);
-  }
-  prevItem = demoItems[index];
-  prevItem.classList.add(ACTIVE_CLASS);
+    if (prevItem) {
+        prevItem.classList.remove(ACTIVE_CLASS);
+    }
+    prevItem = demoItems[index];
+    prevItem.classList.add(ACTIVE_CLASS);
 }
 
 function handleIFrameLoad() {
-  iframe.loading = false;
+    iframe.loading = false;
 }
 
 function handleItemClick(event) {
-  const currItem = event.target;
-  if (currItem === prevItem) return;
+    const currItem = event.target;
+    if (currItem === prevItem) return;
 
-  prevItem.classList.remove(ACTIVE_CLASS);
-  currItem.classList.add(ACTIVE_CLASS);
+    prevItem.classList.remove(ACTIVE_CLASS);
+    currItem.classList.add(ACTIVE_CLASS);
 
-  const currPath = currItem.getAttribute(PATH_ATTRIBUTE);
-  const currRoute = routes.find((route) => route.path === currPath);
-  location.hash = HASH_PREFFIX + currPath;
-  iframe.src = currRoute.src;
+    const currPath = currItem.getAttribute(PATH_ATTRIBUTE);
+    const currRoute = routes.find((route) => route.path === currPath);
+    location.hash = HASH_PREFFIX + currPath;
+    iframe.src = currRoute.src;
 
-  prevItem = currItem;
+    prevItem = currItem;
 }
 
 window.onload = handlePageLoad;

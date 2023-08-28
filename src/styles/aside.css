@@ -1,78 +1,78 @@
 aside {
-  position: fixed;
-  top: 0;
-  left: -200px;
-  width: 200px;
-  height: 100vh;
-  background-color: #fff;
-  filter: drop-shadow(0 0 5px var(--shadow-color));
-  transition: left 0.5s;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100vh;
+    background-color: #fff;
+    filter: drop-shadow(0 0 5px var(--shadow-color));
+    transition: left 0.5s;
 }
 
 aside:hover {
-  left: 0;
+    left: 0;
 }
 
 aside .content {
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  box-sizing: border-box;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
 aside .content::-webkit-scrollbar {
-  width: 0;
+    width: 0;
 }
 
 aside .content .demo-item {
-  height: 48px;
-  padding: 0 10px;
-  background-color: #fff;
-  margin-bottom: 15px;
-  font-size: 16px;
-  color: var(--primary-font-color);
-  line-height: 48px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  cursor: pointer;
-  filter: drop-shadow(0 0 5px var(--shadow-color));
-  transition: all 0.5s;
+    height: 48px;
+    padding: 0 10px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: var(--primary-font-color);
+    line-height: 48px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px var(--shadow-color));
+    transition: all 0.5s;
 }
 
 aside .content .demo-item.active {
-  background-color: var(--primary-bg-color);
-  color: #fff;
+    background-color: var(--primary-bg-color);
+    color: #fff;
 }
 
 .content .demo-item.active:hover {
-  color: #fff;
+    color: #fff;
 }
 
 aside .content .demo-item:hover {
-  color: var(--primary-bg-color);
+    color: var(--primary-bg-color);
 }
 
 aside .content .demo-item:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 aside .right-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  width: 30px;
-  height: 60px;
-  background-color: #fff;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 30px;
+    height: 60px;
+    background-color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transform: translateY(-50%);
 }
 
 /* 适配 safari */
 aside .right-button img {
-  width: 100%;
+    width: 100%;
 }

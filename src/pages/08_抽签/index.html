@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>抽签</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>抽签</title>
+    </head>
 
-  <body>
-    <div id="app">
-      <header class="">
-        <div class="import-wrapper">
-          <div class="import">
-            <input
-              type="file"
-              id="import-excel"
-              accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            />
-            <span>选择文件</span>
-          </div>
-          <div class="file-name">暂无文件</div>
+    <body>
+        <div id="app">
+            <header class="">
+                <div class="import-wrapper">
+                    <div class="import">
+                        <input
+                            type="file"
+                            id="import-excel"
+                            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                        />
+                        <span>选择文件</span>
+                    </div>
+                    <div class="file-name">暂无文件</div>
+                </div>
+                <a
+                    href="https://lvdengming.com/assets/files/lottery_template.xlsx"
+                    >下载模板</a
+                >
+            </header>
+
+            <section class="lottery-wrapper">
+                <div class="teams"></div>
+
+                <div class="lottery">
+                    <div class="buttons">
+                        <div class="start">开始</div>
+                        <div class="stop">停止</div>
+                    </div>
+                    <h1>-</h1>
+                    <div class="order"></div>
+                </div>
+
+                <div class="selected-teams"></div>
+            </section>
         </div>
-        <a href="https://lvdengming.com/assets/files/lottery_template.xlsx"
-          >下载模板</a
-        >
-      </header>
 
-      <section class="lottery-wrapper">
-        <div class="teams"></div>
+        <footer>
+            <p>说明：</p>
+            <p>
+                1、使用前请点击页面右上角【下载模板】下载队伍信息模板填写队伍信息
+            </p>
+            <p>
+                2、每支队伍由 3
+                人组成，点击【开始】按钮即可开始抽签，点击【停止】按钮则停止抽签
+            </p>
+            <p>3、只要抽中队伍某位队员，则该队伍就按照抽签顺序在右侧排列</p>
+        </footer>
 
-        <div class="lottery">
-          <div class="buttons">
-            <div class="start">开始</div>
-            <div class="stop">停止</div>
-          </div>
-          <h1>-</h1>
-          <div class="order"></div>
-        </div>
-
-        <div class="selected-teams"></div>
-      </section>
-    </div>
-
-    <footer>
-      <p>说明：</p>
-      <p>1、使用前请点击页面右上角【下载模板】下载队伍信息模板填写队伍信息</p>
-      <p>
-        2、每支队伍由 3
-        人组成，点击【开始】按钮即可开始抽签，点击【停止】按钮则停止抽签
-      </p>
-      <p>3、只要抽中队伍某位队员，则该队伍就按照抽签顺序在右侧排列</p>
-    </footer>
-
-    <!-- use xlsx.full.min.js from version 0.19.2 -->
-    <script
-      lang="javascript"
-      src="https://cdn.sheetjs.com/xlsx-0.19.2/package/dist/xlsx.full.min.js"
-    ></script>
-    <script type="module" src="./index.js"></script>
-  </body>
+        <!-- use xlsx.full.min.js from version 0.19.2 -->
+        <script
+            lang="javascript"
+            src="https://cdn.sheetjs.com/xlsx-0.19.2/package/dist/xlsx.full.min.js"
+        ></script>
+        <script type="module" src="./index.js"></script>
+    </body>
 </html>

@@ -1,90 +1,90 @@
 html,
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  background-color: #181818;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #181818;
 }
 
 #eat-pea {
-  --color: #60ad80;
+    --color: #60ad80;
 
-  position: relative;
-  width: 125px;
-  height: 50px;
+    position: relative;
+    width: 125px;
+    height: 50px;
 }
 
 .sector {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 25px solid var(--color);
-  border-right-color: transparent;
-  border-radius: 50%;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 25px solid var(--color);
+    border-right-color: transparent;
+    border-radius: 50%;
 }
 
 .ball {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--color);
-  transform: translateY(-5px);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color);
+    transform: translateY(-5px);
 }
 
 .sector:nth-of-type(1) {
-  animation: rotate-to-top 0.5s infinite;
+    animation: rotate-to-top 0.5s infinite;
 }
 
 .sector:nth-of-type(2) {
-  animation: rotate-to-bottom 0.5s infinite;
+    animation: rotate-to-bottom 0.5s infinite;
 }
 
 .ball:nth-of-type(3) {
-  animation: translate-ball 1s linear -0.5s infinite;
+    animation: translate-ball 1s linear -0.5s infinite;
 }
 
 .ball:nth-of-type(4) {
-  animation: translate-ball 1s linear infinite;
+    animation: translate-ball 1s linear infinite;
 }
 
 @keyframes rotate-to-top {
-  0% {
-    transform: rotate(270deg);
-  }
+    0% {
+        transform: rotate(270deg);
+    }
 
-  50% {
-    transform: rotate(1turn);
-  }
+    50% {
+        transform: rotate(1turn);
+    }
 
-  100% {
-    transform: rotate(270deg);
-  }
+    100% {
+        transform: rotate(270deg);
+    }
 }
 
 @keyframes rotate-to-bottom {
-  0% {
-    transform: rotate(90deg);
-  }
+    0% {
+        transform: rotate(90deg);
+    }
 
-  50% {
-    transform: rotate(0);
-  }
+    50% {
+        transform: rotate(0);
+    }
 
-  100% {
-    transform: rotate(90deg);
-  }
+    100% {
+        transform: rotate(90deg);
+    }
 }
 
 @keyframes translate-ball {
-  100% {
-    transform: translate(-100px, -5px);
-  }
+    100% {
+        transform: translate(-100px, -5px);
+    }
 }

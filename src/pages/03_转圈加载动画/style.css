@@ -1,32 +1,32 @@
 @import url('../../styles/init.css');
 
 .loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
 }
 
 .loading-body {
-  --loading-size: 35px;
-  --loading-color: #5a9cf8;
+    --loading-size: 35px;
+    --loading-color: #5a9cf8;
 
-  width: var(--loading-size);
-  height: var(--loading-size);
-  border: calc(var(--loading-size) * 0.15) solid var(--loading-color);
-  border-right-color: transparent;
-  border-radius: 50%;
-  animation: rotate 0.8s linear 0s infinite;
+    width: var(--loading-size);
+    height: var(--loading-size);
+    border: calc(var(--loading-size) * 0.15) solid var(--loading-color);
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: rotate 0.8s linear 0s infinite;
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
+    0% {
+        transform: rotate(0);
+    }
 
-  100% {
-    transform: rotate(1turn);
-  }
+    100% {
+        transform: rotate(1turn);
+    }
 }
