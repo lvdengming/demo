@@ -44,6 +44,16 @@ export const routes = [
         path: 'dynamic-input',
         src: 'src/pages/09_动态输入文字',
     },
+    {
+        title: '轮播图',
+        path: 'carousel',
+        src: 'src/pages/10_轮播图',
+    },
+    {
+        title: '主题切换',
+        path: 'theme-toggle',
+        src: 'src/pages/11_主题切换',
+    },
 ];
 
 export const router = {

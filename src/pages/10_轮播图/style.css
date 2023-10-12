@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.swiper {
+    width: 640px;
+    height: 480px;
+    border: 1px solid #ccc;
+    margin: 75px auto;
+    filter: blur(3px);
+}
+
+.item-wrapper {
+    height: 480px;
+    white-space: nowrap;
+}
+
+.item {
+    float: left;
+    width: 640px;
+    height: 480px;
+}
+
+[item-1] {
+    background-color: #e8655a;
+}
+
+[item-2] {
+    background-color: #efb858;
+}
+
+[item-3] {
+    background-color: #6fbf57;
+}
