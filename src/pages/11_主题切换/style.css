@@ -49,3 +49,9 @@ body {
 html[data-theme='dark'] .circle {
     left: 65px;
 }
+
+@media screen and (width < 800px) {
+    h1 {
+        font-size: 1em;
+    }
+}

@@ -22,4 +22,8 @@ function setPageTheme(theme) {
     const circle = document.querySelector('.theme-toggle .circle');
     const left = theme === Theme.LIGHT ? '5px' : '65px';
     circle.style.left = left;
+
+    // 设置显示文本
+    const title = document.querySelector('h1 .theme');
+    title.innerHTML = theme;
 }
