@@ -48,6 +48,7 @@ export const routes = [
         title: '轮播图',
         path: 'carousel',
         src: 'src/pages/10_轮播图',
+        isNotComplete: true,
     },
     {
         title: '主题切换',

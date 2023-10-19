@@ -14,10 +14,22 @@
         <link rel="stylesheet" href="./src/styles/aside.css" />
         <link rel="stylesheet" href="./src/styles/main.css" />
         <link rel="stylesheet" href="./src/styles/mobile.css" />
+        <link rel="stylesheet" href="./src/styles/no-complete.css" />
         <title>demo</title>
     </head>
 
     <body>
+        <aside>
+            <div class="content"></div>
+            <div class="right-button">
+                <img src="./assets/right.svg" alt="right" />
+            </div>
+        </aside>
+
+        <main>
+            <iframe id="demo-view" frameborder="0"></iframe>
+        </main>
+
         <section id="loading">
             <div class="loading-content">
                 <div class="sun">
@@ -37,16 +49,9 @@
             </div>
         </section>
 
-        <aside>
-            <div class="content"></div>
-            <div class="right-button">
-                <img src="./assets/right.svg" alt="right" />
-            </div>
-        </aside>
-
-        <main>
-            <iframe id="demo-view" frameborder="0"></iframe>
-        </main>
+        <section id="not-complete">
+            <span>页面建设中...</span>
+        </section>
 
         <script type="module" src="./src/scripts/init.js" defer></script>
     </body>

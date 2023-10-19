@@ -6,6 +6,7 @@ const ACTIVE_CLASS = 'active';
 const PATH_ATTRIBUTE = 'to';
 const LOADING_ID = 'loading';
 const IFRAME_ID = 'demo-view';
+const NOT_COMPLETE_ID = 'not-complete';
 const HASH_PREFFIX = '#/';
 
 const demoItems = [];
@@ -67,6 +68,8 @@ function handleHashChange() {
     }
     prevItem = demoItems[index];
     prevItem.classList.add(ACTIVE_CLASS);
+
+    updatePageState(routes[index]);
 }
 
 function handleIFrameLoad() {
@@ -85,7 +88,13 @@ function handleItemClick(event) {
     location.hash = HASH_PREFFIX + currPath;
     iframe.src = currRoute.src;
 
+    updatePageState(currRoute);
     prevItem = currItem;
+}
+
+function updatePageState(route) {
+    const notCompleteEl = document.getElementById(NOT_COMPLETE_ID);
+    notCompleteEl.style.display = route.isNotComplete ? 'grid' : 'none';
 }
 
 window.onload = handlePageLoad;

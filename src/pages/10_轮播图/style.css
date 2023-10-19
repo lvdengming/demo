@@ -13,7 +13,6 @@ body {
     height: 480px;
     border: 1px solid #ccc;
     margin: 75px auto;
-    filter: blur(3px);
 }
 
 .item-wrapper {

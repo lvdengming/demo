@@ -1,0 +1,18 @@
+#not-complete {
+    display: none;
+
+    /* display: grid; */
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255 255 255 / 50%);
+    backdrop-filter: blur(4px);
+}
+
+#not-complete span {
+    font-size: 24px;
+    color: var(--primary-font-color);
+}

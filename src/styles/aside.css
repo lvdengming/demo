@@ -7,6 +7,7 @@ aside {
     background-color: #fff;
     filter: drop-shadow(0 0 5px var(--shadow-color));
     transition: left 0.5s;
+    z-index: 1;
 }
 
 aside:hover {
