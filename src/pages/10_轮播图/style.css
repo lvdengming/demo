@@ -3,27 +3,45 @@
     margin: 0;
 }
 
+:root {
+    font-size: 100px;
+
+    --item-width: 640px;
+    --item-height: 480px;
+}
+
 body {
+    display: grid;
+    place-items: center;
     height: 100vh;
-    overflow: hidden;
 }
 
 .swiper {
-    width: 640px;
-    height: 480px;
+    position: relative;
+    width: var(--item-width);
+    height: var(--item-height);
     border: 1px solid #ccc;
-    margin: 75px auto;
+    border-radius: 3px;
+    overflow: hidden;
 }
 
 .item-wrapper {
-    height: 480px;
+    display: flex;
+    align-items: center;
+    width: calc(var(--item-width) * 5);
+    height: var(--item-height);
     white-space: nowrap;
+    transition: transform 1s;
 }
 
 .item {
-    float: left;
-    width: 640px;
-    height: 480px;
+    display: grid;
+    place-items: center;
+    width: var(--item-width);
+    height: var(--item-height);
+    font-size: 0.32rem;
+    color: #191919;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 [item-1] {
@@ -36,4 +54,53 @@ body {
 
 [item-3] {
     background-color: #6fbf57;
+}
+
+.button-wrapper i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    background-color: rgb(0 0 0 / 12%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.button-wrapper .left {
+    left: 16px;
+    background-image: url('./left.png');
+}
+
+.button-wrapper .right {
+    right: 16px;
+    background-image: url('./right.png');
+}
+
+.indicator-list {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80px;
+    height: 24px;
+    background-color: rgb(0 0 0 / 12%);
+    border-radius: 12px;
+    transform: translateX(-50%);
+}
+
+.indicator-list .indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgb(255 255 255 / 12%);
+}
+
+.indicator-list .indicator.active {
+    background-color: rgb(255 255 255 / 48%);
 }

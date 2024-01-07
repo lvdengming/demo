@@ -7,9 +7,4 @@ window.onload = () => {
         createViewInComputer();
         return;
     }
-
-    // const doms = {
-    //     swiper: document.querySelector('.swiper'),
-    //     items: document.querySelectorAll('.swiper-item')
-    // };
 };
