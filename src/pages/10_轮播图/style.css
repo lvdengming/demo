@@ -4,103 +4,130 @@
 }
 
 :root {
-    font-size: 100px;
-
-    --item-width: 640px;
-    --item-height: 480px;
+    --slide-width: 800px;
+    --slide-height: 600px;
+    --slide-transition-time: 0.5s;
+    --slide-items: 3;
+    --slide-item-color-1: #e8655a;
+    --slide-item-color-2: #efb858;
+    --slide-item-color-3: #6fbf57;
+    --slide-font-color: #343434;
+    --slide-font-size: 36px;
+    --slide-font-family: sf pro display, sf pro icons, helvetica neue, helvetica,
+        arial, sans-serif;
+    --arrow-wrapper-size: 36px;
+    --arrow-wrapper-bg-color: rgb(255 255 255 / 25%);
+    --arrow-wrapper-bg-color-active: rgb(255 255 255 / 50%);
+    --arrow-size: 20px;
+    --arrow-gap: 24px;
+    --indicator-wrapper-gap: 20px;
+    --indicator-size: 12px;
+    --indicator-gap: 16px;
+    --indicator-color: rgb(255 255 255 / 25%);
+    --indicator-color-active: rgb(255 255 255 / 75%);
+    --transition-time: 0.25s;
 }
 
-body {
-    display: grid;
-    place-items: center;
-    height: 100vh;
-}
-
-.swiper {
+.carousel {
     position: relative;
-    width: var(--item-width);
-    height: var(--item-height);
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    width: var(--slide-width);
+    height: var(--slide-height);
+    border-radius: 5px;
+    margin: 50px auto;
     overflow: hidden;
 }
 
-.item-wrapper {
+.slide-wrapper {
     display: flex;
+    position: absolute;
+    left: 0;
+    width: calc(var(--slide-width) * var(--slide-items));
+    height: var(--slide-height);
+    transition: left var(--slide-transition-time);
+}
+
+.slide-item {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width: calc(var(--item-width) * 5);
-    height: var(--item-height);
-    white-space: nowrap;
-    transition: transform 1s;
+    width: var(--slide-width);
+    height: var(--slide-height);
+    font-size: var(--slide-font-size);
+    color: var(--slide-font-color);
 }
 
-.item {
-    display: grid;
-    place-items: center;
-    width: var(--item-width);
-    height: var(--item-height);
-    font-size: 0.32rem;
-    color: #191919;
-    font-family: Arial, Helvetica, sans-serif;
+.slide-item:nth-child(1) {
+    background-color: var(--slide-item-color-1);
 }
 
-[item-1] {
-    background-color: #e8655a;
+.slide-item:nth-child(2) {
+    background-color: var(--slide-item-color-2);
 }
 
-[item-2] {
-    background-color: #efb858;
+.slide-item:nth-child(3) {
+    background-color: var(--slide-item-color-3);
 }
 
-[item-3] {
-    background-color: #6fbf57;
-}
-
-.button-wrapper i {
+.arrow-wrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    width: 36px;
-    height: 36px;
-    background-color: rgb(0 0 0 / 12%);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    width: var(--arrow-wrapper-size);
+    height: var(--arrow-wrapper-size);
+    background-color: var(--arrow-wrapper-bg-color);
     border-radius: 50%;
     cursor: pointer;
+    transform: translateY(-50%);
+    transition: all var(--transition-time);
 }
 
-.button-wrapper .left {
-    left: 16px;
-    background-image: url('./left.png');
+.arrow-wrapper > div:hover {
+    background-color: var(--arrow-wrapper-bg-color-active);
 }
 
-.button-wrapper .right {
-    right: 16px;
-    background-image: url('./right.png');
+.arrow-wrapper > div svg {
+    width: var(--arrow-size);
+    height: var(--arrow-size);
 }
 
-.indicator-list {
-    position: absolute;
-    left: 50%;
-    bottom: 16px;
+.arrow-left {
+    left: var(--arrow-gap);
+}
+
+.arrow-right {
+    right: var(--arrow-gap);
+}
+
+.indicator-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80px;
-    height: 24px;
-    background-color: rgb(0 0 0 / 12%);
-    border-radius: 12px;
+    position: absolute;
+    left: 50%;
+    bottom: var(--indicator-wrapper-gap);
+    width: calc(
+        var(--indicator-size) * var(--slide-items) + (var(--slide-items) - 1) *
+            var(--indicator-gap)
+    );
+    height: var(--indicator-size);
     transform: translateX(-50%);
 }
 
-.indicator-list .indicator {
-    width: 8px;
-    height: 8px;
+.indicator-item {
+    width: var(--indicator-size);
+    height: var(--indicator-size);
     border-radius: 50%;
-    background-color: rgb(255 255 255 / 12%);
+    background-color: var(--indicator-color);
+    cursor: pointer;
+    transition: all var(--transition-time);
 }
 
-.indicator-list .indicator.active {
-    background-color: rgb(255 255 255 / 48%);
+.indicator-item:hover {
+    background-color: var(--indicator-color-active);
+}
+
+.indicator-item.active {
+    background-color: var(--indicator-color-active);
 }

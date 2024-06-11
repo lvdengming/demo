@@ -7,4 +7,11 @@ window.onload = () => {
         createViewInComputer();
         return;
     }
+
+    const slideList = document.querySelectorAll('.slide-item');
+    const arrowLeft = document.querySelector('.arrow-left');
+    const arrowRight = document.querySelector('.arrow-right');
+    const indicatorList = document.querySelectorAll('.indicator-item');
+
+    console.log(slideList, arrowLeft, arrowRight, indicatorList);
 };

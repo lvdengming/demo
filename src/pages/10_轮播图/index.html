@@ -8,24 +8,48 @@
     </head>
 
     <body>
-        <section class="swiper">
-            <div class="item-wrapper">
-                <div class="item" item-1>1</div>
-                <div class="item" item-2>2</div>
-                <div class="item" item-3>3</div>
+        <div class="carousel">
+            <div class="slide-wrapper">
+                <div class="slide-item">A</div>
+                <div class="slide-item">B</div>
+                <div class="slide-item">C</div>
             </div>
 
-            <div class="button-wrapper">
-                <i class="left"></i>
-                <i class="right"></i>
+            <div class="arrow-wrapper">
+                <div class="arrow-left">
+                    <svg
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="#fff"
+                        stroke-width="4"
+                        stroke-linecap="butt"
+                        stroke-linejoin="miter"
+                    >
+                        <path d="M32 8.4 16.444 23.956 32 39.513"></path>
+                    </svg>
+                </div>
+                <div class="arrow-right">
+                    <svg
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="#fff"
+                        stroke-width="4"
+                        stroke-linecap="butt"
+                        stroke-linejoin="miter"
+                    >
+                        <path d="m16 39.513 15.556-15.557L16 8.4"></path>
+                    </svg>
+                </div>
             </div>
 
-            <div class="indicator-list">
-                <i class="indicator active"></i>
-                <i class="indicator"></i>
-                <i class="indicator"></i>
+            <div class="indicator-wrapper">
+                <i class="indicator-item active"></i>
+                <i class="indicator-item"></i>
+                <i class="indicator-item"></i>
             </div>
-        </section>
+        </div>
 
         <script src="./index.js" type="module"></script>
     </body>
