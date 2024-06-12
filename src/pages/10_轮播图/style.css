@@ -22,7 +22,7 @@
     --arrow-gap: 24px;
     --indicator-wrapper-gap: 20px;
     --indicator-size: 12px;
-    --indicator-gap: 16px;
+    --indicator-gap: 8px;
     --indicator-color: rgb(255 255 255 / 25%);
     --indicator-color-active: rgb(255 255 255 / 75%);
     --transition-time: 0.25s;
@@ -56,15 +56,15 @@
     color: var(--slide-font-color);
 }
 
-.slide-item:nth-child(1) {
+.slide-item.color-1 {
     background-color: var(--slide-item-color-1);
 }
 
-.slide-item:nth-child(2) {
+.slide-item.color-2 {
     background-color: var(--slide-item-color-2);
 }
 
-.slide-item:nth-child(3) {
+.slide-item.color-3 {
     background-color: var(--slide-item-color-3);
 }
 
