@@ -9,12 +9,16 @@ main {
 }
 
 .view-source-code {
+    display: flex;
+    align-items: center;
     position: fixed;
     top: 16px;
     right: 16px;
+    height: 24px;
 }
 
 .view-source-code > a {
+    font-size: 16px;
     color: var(--primary-bg-color);
 }
 
