@@ -8,6 +8,7 @@ const LOADING_ID = 'loading';
 const IFRAME_ID = 'demo-view';
 const NOT_COMPLETE_ID = 'not-complete';
 const HASH_PREFFIX = '#/';
+const GIT_LINK = 'https://github.com/lvdengming/demo/tree/master/';
 
 const demoItems = [];
 const iframe = new Proxy(
@@ -17,6 +18,9 @@ const iframe = new Proxy(
             if (property === 'src') {
                 receiver.loading = true;
                 iframeElement.setAttribute('src', newValue);
+
+                const link = GIT_LINK + newValue;
+                sourceLink.setAttribute('href', link);
             } else if (property === 'loading') {
                 const loading = document.getElementById(LOADING_ID);
                 if (newValue) {
@@ -34,6 +38,7 @@ const iframe = new Proxy(
 
 let prevItem;
 let iframeElement;
+let sourceLink;
 
 function handlePageLoad() {
     for (const route of routes) {
@@ -49,6 +54,7 @@ function handlePageLoad() {
     demoContainer.append(...demoItems);
     iframeElement = document.getElementById(IFRAME_ID);
     iframeElement.onload = handleIFrameLoad;
+    sourceLink = document.querySelector('.view-source-code > a');
 
     handleHashChange();
 }
