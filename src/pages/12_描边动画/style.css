@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --animation-long-time: 3s;
+    --animation-short-time: 1s;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #ee887f;
+    overflow: hidden;
+}
+
+#path-1 {
+    stroke-dasharray: var(--path-length-1);
+    stroke-dashoffset: var(--path-length-1);
+    animation-name: stroke;
+    animation-delay: 0;
+    animation-duration: var(--animation-long-time);
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+#path-2 {
+    stroke-dasharray: var(--path-length-2);
+    stroke-dashoffset: var(--path-length-2);
+    animation-name: stroke;
+    animation-delay: var(--animation-long-time);
+    animation-duration: var(--animation-long-time);
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+#path-3 {
+    stroke-dasharray: var(--path-length-3);
+    stroke-dashoffset: var(--path-length-3);
+    animation-name: stroke;
+    animation-delay: calc(2 * var(--animation-long-time));
+    animation-duration: var(--animation-short-time);
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+#path-4 {
+    stroke-dasharray: var(--path-length-4);
+    stroke-dashoffset: var(--path-length-4);
+    animation-name: stroke;
+    animation-delay: calc(
+        2 * var(--animation-long-time) + var(--animation-short-time)
+    );
+    animation-duration: var(--animation-short-time);
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes stroke {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

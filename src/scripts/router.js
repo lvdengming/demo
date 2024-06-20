@@ -55,6 +55,11 @@ export const routes = [
         path: 'theme-toggle',
         src: 'src/pages/11_主题切换',
     },
+    {
+        title: '描边动画',
+        path: 'stroke-animation',
+        src: 'src/pages/12_描边动画',
+    },
 ];
 
 export const router = {
