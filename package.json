@@ -5,7 +5,7 @@
     "main": "src/index.js",
     "scripts": {
         "prepare": "husky install",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "create-page": "cross-env-shell node scripts/create-page.cjs --name $npm_config_name"
     },
     "repository": {
         "type": "git",
@@ -64,6 +64,7 @@
     },
     "dependencies": {
         "chalk": "4",
+        "cross-env": "^7.0.3",
         "minimist": "^1.2.8"
     }
 }
