@@ -53,13 +53,17 @@
         ]
     },
     "devDependencies": {
+        "@commitlint/cli": "^17.4.4",
+        "@commitlint/config-conventional": "^17.4.4",
+        "eslint": "^8.35.0",
         "husky": "^8.0.3",
         "lint-staged": "^13.1.2",
-        "eslint": "^8.35.0",
-        "stylelint": "^15.2.0",
-        "stylelint-config-standard": "^30.0.1",
         "prettier": "2.8.4",
-        "@commitlint/cli": "^17.4.4",
-        "@commitlint/config-conventional": "^17.4.4"
+        "stylelint": "^15.2.0",
+        "stylelint-config-standard": "^30.0.1"
+    },
+    "dependencies": {
+        "chalk": "4",
+        "minimist": "^1.2.8"
     }
 }
