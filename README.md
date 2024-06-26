@@ -1,10 +1,35 @@
-# demo
+# Demo
 
-h5 demos
+A personal h5 demos collection.
 
-## todo
+## Running Command
 
--   移动端适配
--   内容分类
--   炫酷的首页（滚动条动态载入）
--   添加查看源码功能
+```sh
+# init
+pnpm install
+
+# create a page
+pnpm run create-page --name 'page_name'
+
+# eslint files
+pnpm run lint
+
+# format files
+pnpm run format
+```
+
+## Todo List
+
+1. Mobile adaptation
+2. Case classification
+3. Home page (scrollbar)
+
+## Contact Me
+
+[lvdengming@foxmail.com](lvdengming@foxmail.com)
+
+## License
+
+[MIT](https://opensource.org/license/MIT)
+
+Copyright (c) 2017-present, Dengming Lv

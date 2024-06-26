@@ -22,7 +22,7 @@ const htmlTemplate = `
 </body>
 
 </html>
-`
+`;
 const cssTemplate = `
 /**
  * author: lvdengming@foxmail.com
@@ -30,20 +30,24 @@ const cssTemplate = `
  */
 
 
-`
+`;
 const jsTemplate = cssTemplate;
 
 const root = path.resolve(__dirname, '..');
 const pagesPath = path.join(root, 'src/pages');
 // 获取目录数量
 const excludes = ['.DS_Store'];
-const count = fs.readdirSync(pagesPath).filter(name => !excludes.includes(name)).length;
+const count = fs
+    .readdirSync(pagesPath)
+    .filter((name) => !excludes.includes(name)).length;
 
 // 创建目录
-const dirName = `${count+1}_${argv.name}`;
+const dirName = `${count + 1}_${argv.name}`;
 const dirPath = path.join(pagesPath, dirName);
 fs.mkdirSync(dirPath);
-console.log(chalk.green(`\n> The following directories are created successfully.`));
+console.log(
+    chalk.green(`\n> The following directories are created successfully.`)
+);
 console.log(dirPath);
 
 // 创建文件
