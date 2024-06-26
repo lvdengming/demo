@@ -4,7 +4,7 @@
 }
 
 body {
-    --animation-long-time: 4s;
+    --animation-long-time: 3s;
     --animation-short-time: 1s;
 
     display: grid;
@@ -29,7 +29,7 @@ body {
     stroke-dashoffset: var(--path-length-2);
     animation-name: stroke;
     animation-delay: var(--animation-long-time);
-    animation-duration: calc(0.5 * var(--animation-long-time));
+    animation-duration: calc(0.45 * var(--animation-long-time));
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
@@ -38,7 +38,7 @@ body {
     stroke-dasharray: var(--path-length-3);
     stroke-dashoffset: var(--path-length-3);
     animation-name: stroke;
-    animation-delay: calc(1.5 * var(--animation-long-time));
+    animation-delay: calc(1.45 * var(--animation-long-time));
     animation-duration: var(--animation-short-time);
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -49,7 +49,7 @@ body {
     stroke-dashoffset: var(--path-length-4);
     animation-name: stroke;
     animation-delay: calc(
-        1.5 * var(--animation-long-time) + var(--animation-short-time)
+        1.45 * var(--animation-long-time) + var(--animation-short-time)
     );
     animation-duration: var(--animation-short-time);
     animation-timing-function: linear;
