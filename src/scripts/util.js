@@ -43,4 +43,20 @@ function createViewInComputer() {
     document.body.append(section);
 }
 
-export { queryClientStatus, debounce, throttle, createViewInComputer };
+function setStyle(strings, ...values) {
+    let cssText = strings[0];
+    for (let i = 0; i < values.length; i++) {
+        cssText += values[i];
+        cssText += strings[i + 1];
+    }
+
+    this.style.cssText += cssText;
+}
+
+export {
+    queryClientStatus,
+    debounce,
+    throttle,
+    createViewInComputer,
+    setStyle,
+};

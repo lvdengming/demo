@@ -60,6 +60,11 @@ export const routes = [
         path: 'stroke-animation',
         src: 'src/pages/12_描边动画',
     },
+    {
+        title: '瀑布流',
+        path: 'waterfall',
+        src: 'src/pages/13_瀑布流',
+    },
 ];
 
 export const router = {
