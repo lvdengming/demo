@@ -16,8 +16,7 @@ aside:hover {
 
 aside .content {
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden auto;
     box-sizing: border-box;
 }
 
@@ -68,12 +67,12 @@ aside .right-button {
     width: 30px;
     height: 60px;
     background-color: #fff;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
     transform: translateY(-50%);
 }
 
 /* 适配 safari */
 aside .right-button img {
-    width: 100%;
+    width: 20px;
 }

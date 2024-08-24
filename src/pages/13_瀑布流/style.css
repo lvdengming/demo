@@ -27,7 +27,8 @@
     background-size: 400% 100%;
     background-clip: content-box;
     padding: var(--wrapper-padding);
-    animation: skeleton-loading 1.4s ease infinite;
+    transition: all 1s;
+    animation: skeleton-loading 1.5s ease infinite;
 }
 
 #app .img-wrapper img {
