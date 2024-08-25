@@ -57,6 +57,7 @@ function handlePageLoad() {
     sourceLink = document.querySelector('.view-source-code > a');
 
     handleHashChange();
+    addMessageEventListener();
 }
 
 function handleHashChange() {
@@ -101,6 +102,18 @@ function handleItemClick(event) {
 function updatePageState(route) {
     const notCompleteEl = document.getElementById(NOT_COMPLETE_ID);
     notCompleteEl.style.display = route.isNotComplete ? 'grid' : 'none';
+}
+
+function addMessageEventListener() {
+    window.addEventListener('message', (event) => {
+        if (event.origin !== location.origin) {
+            return;
+        }
+
+        if (event.data.closeLoading) {
+            iframe.loading = false;
+        }
+    });
 }
 
 window.onload = handlePageLoad;

@@ -95,9 +95,17 @@ function addIntersectionObserver() {
     });
 }
 
+/**
+ * 通知父窗口，关闭加载动画（当前页面首屏图片加载时间较长）
+ */
+function closeLoading() {
+    window.parent.postMessage({ closeLoading: true });
+}
+
 init();
 layoutWaterfall();
 addIntersectionObserver();
+closeLoading();
 
 /* eslint-disable no-undef */
 window.addEventListener(
