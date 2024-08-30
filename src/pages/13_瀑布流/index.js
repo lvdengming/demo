@@ -9,8 +9,9 @@ import { setStyle } from '../../scripts/util.js';
 const config = {
     ITEMS_COUNT: 100,
     DISPLAY_CONTAINER: document.getElementById('app'),
+    WATERFALL_ITEM_CLASS_NAME: 'waterfall-item',
     /**
-     * imgWrapper高度，实际展示img大小需要去除imgWrapper内边距
+     * imgWrapper大小等同于img大小，为waterfallItem大小减去内边距
      */
     IMG_WRAPPER_CLASS_NAME: 'img-wrapper',
     IMG_WIDTH: 300,
@@ -19,7 +20,7 @@ const config = {
     IMG_BASE_URL: 'https://picsum.photos',
     LAYOUT_WAIT_TIME: 1000,
 };
-const imgWrapperList = [];
+const waterfallItemList = [];
 
 let observer;
 
@@ -33,18 +34,23 @@ function init() {
         const height =
             config.IMG_MIN_HEIGHT + Math.round(Math.random() * heightRange);
 
-        const div = document.createElement('div');
-        div.className = config.IMG_WRAPPER_CLASS_NAME;
-        div.dataset.src = `${config.IMG_BASE_URL}/${config.IMG_WIDTH}/${height}?random=${i}`;
-        div.setStyle = setStyle;
-        div.setStyle`
+        const waterfall = document.createElement('div');
+        waterfall.className = config.WATERFALL_ITEM_CLASS_NAME;
+        waterfall.dataset.src = `${config.IMG_BASE_URL}/${config.IMG_WIDTH}/${height}?random=${i}`;
+        waterfall.setStyle = setStyle;
+        waterfall.setStyle`
             position: absolute;
             width: ${config.IMG_WIDTH}px;
             height: ${height}px;
         `;
 
-        config.DISPLAY_CONTAINER.append(div);
-        imgWrapperList.push(div);
+        const imgWrapper = document.createElement('div');
+        imgWrapper.className = config.IMG_WRAPPER_CLASS_NAME;
+        imgWrapper.setStyle = setStyle;
+        waterfall.append(imgWrapper);
+
+        config.DISPLAY_CONTAINER.append(waterfall);
+        waterfallItemList.push(waterfall);
     }
 }
 
@@ -57,14 +63,14 @@ function layoutWaterfall() {
     );
     const layoutHeights = new Array(columnCount).fill(0);
 
-    imgWrapperList.forEach((wrapper) => {
+    waterfallItemList.forEach((waterfall) => {
         const index = layoutHeights.indexOf(Math.min(...layoutHeights));
-        wrapper.setStyle`
+        waterfall.setStyle`
             top: ${layoutHeights[index]}px;
             left: ${index * config.IMG_WIDTH}px;
         `;
 
-        layoutHeights[index] += wrapper.clientHeight;
+        layoutHeights[index] += waterfall.clientHeight;
     });
 }
 
@@ -78,19 +84,23 @@ function addIntersectionObserver() {
                 return;
             }
 
-            const imgWrapper = entry.target;
+            const waterfall = entry.target;
+            const imgWrapper = waterfall.querySelector(
+                `.${config.IMG_WRAPPER_CLASS_NAME}`
+            );
+
             const img = document.createElement('img');
-            img.src = imgWrapper.dataset.src;
+            img.src = waterfall.dataset.src;
             img.addEventListener('load', () => {
                 imgWrapper.setStyle`background-image: none;`;
                 imgWrapper.append(img);
             });
 
-            observer.unobserve(imgWrapper);
+            observer.unobserve(waterfall);
         });
     });
 
-    imgWrapperList.forEach((wrapper) => {
+    waterfallItemList.forEach((wrapper) => {
         observer.observe(wrapper);
     });
 }

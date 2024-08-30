@@ -6,7 +6,8 @@
 :root {
     --skeleton-from-color: #f0f2f5;
     --skeleton-to-color: #e6e8eb;
-    --wrapper-padding: 8px;
+    --waterfall-item-padding: 8px;
+    --img-wrapper-border-radius: 6px;
 }
 
 * {
@@ -17,7 +18,13 @@
     position: relative;
 }
 
-#app .img-wrapper {
+#app .waterfall-item {
+    padding: var(--waterfall-item-padding);
+}
+
+#app .waterfall-item .img-wrapper {
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(
         90deg,
         var(--skeleton-from-color) 25%,
@@ -25,15 +32,16 @@
         var(--skeleton-from-color) 63%
     );
     background-size: 400% 100%;
-    background-clip: content-box;
-    padding: var(--wrapper-padding);
+    border-radius: var(--img-wrapper-border-radius);
+    overflow: hidden;
     transition: all 1s;
     animation: skeleton-loading 1.5s ease infinite;
 }
 
-#app .img-wrapper img {
+#app .waterfall-item .img-wrapper img {
     width: 100%;
     height: 100%;
+    border-radius: var(--img-wrapper-border-radius);
     animation: move-in 1s forwards;
 }
 
