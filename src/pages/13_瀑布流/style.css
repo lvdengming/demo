@@ -20,6 +20,7 @@
 
 #app .waterfall-item {
     padding: var(--waterfall-item-padding);
+    transition: all 1s;
 }
 
 #app .waterfall-item .img-wrapper {
@@ -34,7 +35,6 @@
     background-size: 400% 100%;
     border-radius: var(--img-wrapper-border-radius);
     overflow: hidden;
-    transition: all 1s;
     animation: skeleton-loading 1.5s ease infinite;
 }
 
