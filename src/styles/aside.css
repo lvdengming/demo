@@ -1,8 +1,8 @@
 aside {
     position: fixed;
     top: 0;
-    left: -200px;
-    width: 200px;
+    left: calc(0px - var(--aside-width));
+    width: var(--aside-width);
     height: 100vh;
     background-color: #fff;
     filter: drop-shadow(0 0 5px var(--shadow-color));

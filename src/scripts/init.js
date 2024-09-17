@@ -1,4 +1,6 @@
+import { ClientStatus } from './constant.js';
 import { routes } from './router.js';
+import { queryClientStatus } from './util.js';
 
 const DEMO_CONTAINER_SELECTOR = 'aside .content';
 const DEMO_ITEM_CLASS = 'demo-item';
@@ -58,6 +60,7 @@ function handlePageLoad() {
 
     handleHashChange();
     addMessageEventListener();
+    addMobileTouchHandler();
 }
 
 function handleHashChange() {
@@ -113,6 +116,23 @@ function addMessageEventListener() {
         if (event.data.closeLoading) {
             iframe.loading = false;
         }
+    });
+}
+
+/**
+ * 优化移动端侧边栏交互
+ */
+function addMobileTouchHandler() {
+    if (queryClientStatus === ClientStatus.NO_MOBILE) {
+        return;
+    }
+
+    const aside = document.querySelector('aside');
+    const arrow = document.querySelector('aside .right-button');
+    arrow.addEventListener('touchend', () => {
+        const left = window.getComputedStyle(aside).left;
+        aside.style.left =
+            left === '0px' ? 'calc(0px - var(--aside-width))' : '0px';
     });
 }
 
