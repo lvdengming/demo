@@ -1,0 +1,139 @@
+/**
+ * author: lvdengming@foxmail.com
+ * date: 2024-09-21
+ */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    --common-span: 8px;
+    --common-bg-color: #f5f5f5;
+    --common-bg-deep-color: #d5d5d5;
+    --common-bg-dragging-color: #999;
+    --common-border-radius: 3px;
+    --common-item-width: 60px;
+    --common-item-height: 35px;
+    --common-box-shadow: drop-shadow(0 0 1px rgb(100 100 100 / 50%));
+    --common-color-1: #ff5733;
+    --common-color-2: #57ff33;
+    --common-color-3: #3385ff;
+    --common-color-4: #ff33a8;
+    --common-color-5: #ffd133;
+    --common-color-6: #33ffd1;
+    --common-color-7: #b833ff;
+    --common-color-8: #f33;
+    --common-color-9: #ff9f33;
+
+    margin: 50px auto;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+main .subject-list {
+    padding: var(--common-span);
+    background-color: var(--common-bg-color);
+    border-radius: var(--common-border-radius);
+}
+
+.subject {
+    width: var(--common-item-width);
+    height: var(--common-item-height);
+    margin-bottom: var(--common-span);
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+}
+
+.subject:last-child {
+    margin-bottom: 0;
+}
+
+.subject.color-1 {
+    background-color: var(--common-color-1);
+}
+
+.subject.color-2 {
+    background-color: var(--common-color-2);
+}
+
+.subject.color-3 {
+    background-color: var(--common-color-3);
+}
+
+.subject.color-4 {
+    background-color: var(--common-color-4);
+}
+
+.subject.color-5 {
+    background-color: var(--common-color-5);
+}
+
+.subject.color-6 {
+    background-color: var(--common-color-6);
+}
+
+.subject.color-7 {
+    background-color: var(--common-color-7);
+}
+
+.subject.color-8 {
+    background-color: var(--common-color-8);
+}
+
+.subject.color-9 {
+    background-color: var(--common-color-9);
+}
+
+main .timetable {
+    padding: var(--common-span);
+    background-color: var(--common-bg-color);
+    border-radius: var(--common-border-radius);
+    border-spacing: 5px;
+    margin-left: var(--common-span);
+}
+
+.timetable th {
+    background-color: var(--common-bg-deep-color);
+    border-radius: var(--common-border-radius);
+    filter: var(--common-box-shadow);
+}
+
+.timetable tbody th {
+    text-orientation: upright;
+}
+
+.timetable td {
+    width: calc(var(--common-item-width) + 2 * var(--common-span));
+    height: calc(var(--common-item-height) + 2 * var(--common-span));
+    background-color: var(--common-bg-color);
+    padding: var(--common-span);
+    border-radius: var(--common-border-radius);
+    filter: var(--common-box-shadow);
+}
+
+.timetable thead td {
+    width: calc(var(--common-item-width) / 2);
+    filter: none;
+}
+
+.timetable .noon-row td {
+    filter: none;
+}
+
+.timetable .dragging-over {
+    background-color: var(--common-bg-dragging-color);
+}

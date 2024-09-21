@@ -65,6 +65,11 @@ export const routes = [
         path: 'waterfall',
         src: 'src/pages/13_瀑布流',
     },
+    {
+        title: '课程表',
+        path: 'timetable',
+        src: 'src/pages/14_课程表',
+    },
 ];
 
 export const router = {

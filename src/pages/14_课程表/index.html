@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>课程表</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div id="app">
+            <h1>课程表</h1>
+            <main>
+                <section class="subject-list" data-drop="move">
+                    <div
+                        class="subject color-1"
+                        draggable="true"
+                        data-effect="copy"
+                    >
+                        语文
+                    </div>
+                    <div
+                        class="subject color-2"
+                        draggable="true"
+                        data-effect="copy"
+                    >
+                        数学
+                    </div>
+                    <div
+                        class="subject color-3"
+                        draggable="true"
+                        data-effect="copy"
+                    >
+                        英语
+                    </div>
+                    <div
+                        class="subject color-4"
+                        draggable="true"
+                        data-effect="copy"
+                    >
+                        物理
+                    </div>
+                    <div
+                        class="subject color-5"
+                        draggable="true"
+                        data-effect="copy"
+                    >
+                        化学
+                    </div>
+                    <div
+                        class="subject color-6"
+                        draggable="true"
+                        data-effect="copy"
+                    >
+                        生物
+                    </div>
+                    <div
+                        class="subject color-7"
+                        draggable="true"
+                        data-effect="copy"
+                    >
+                        政治
+                    </div>
+                    <div
+                        class="subject color-8"
+                        draggable="true"
+                        data-effect="copy"
+                    >
+                        历史
+                    </div>
+                    <div
+                        class="subject color-9"
+                        draggable="true"
+                        data-effect="copy"
+                    >
+                        地理
+                    </div>
+                </section>
+
+                <table class="timetable">
+                    <colgroup>
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <th>星期一</th>
+                            <th>星期二</th>
+                            <th>星期三</th>
+                            <th>星期四</th>
+                            <th>星期五</th>
+                            <th>星期六</th>
+                            <th>星期日</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th rowspan="5">
+                                <div>上</div>
+                                <div style="margin-top: 20px">午</div>
+                            </th>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                        </tr>
+                        <tr>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                        </tr>
+                        <tr>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                        </tr>
+                        <tr>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                        </tr>
+                        <tr>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                        </tr>
+
+                        <tr class="noon-row">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="4">
+                                <div>下</div>
+                                <div style="margin-top: 20px">午</div>
+                            </th>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                        </tr>
+
+                        <tr>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                        </tr>
+                        <tr>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                        </tr>
+                        <tr>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                            <td data-drop="copy"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
