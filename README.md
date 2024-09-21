@@ -9,7 +9,7 @@ A personal h5 demos collection.
 pnpm install
 
 # create a page
-pnpm run create-page --name 'page_name'
+pnpm run create-page --name 'page_name' --route 'page_route'
 
 # eslint files
 pnpm run lint
@@ -17,12 +17,6 @@ pnpm run lint
 # format files
 pnpm run format
 ```
-
-## Todo List
-
-1. Mobile adaptation
-2. Case classification
-3. Home page (scrollbar)
 
 ## Contact Me
 
