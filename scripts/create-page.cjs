@@ -4,6 +4,16 @@ const fs = require('fs');
 const chalk = require('chalk');
 const argv = require('minimist')(process.argv.slice(2));
 
+if ([argv.name, argv.route].some((s) => s === true)) {
+    console.log(
+        chalk.red(
+            'In this command, --name option and --route option is required.'
+        )
+    );
+
+    process.exit(1);
+}
+
 // 模板文件内容
 const htmlTemplate = `
 <!DOCTYPE html>
@@ -46,7 +56,7 @@ const dirName = `${count + 1}_${argv.name}`;
 const dirPath = path.join(pagesPath, dirName);
 fs.mkdirSync(dirPath);
 console.log(
-    chalk.green(`\n> The following directories are created successfully.`)
+    chalk.green(`\n> The following directory is created successfully.`)
 );
 console.log(dirPath);
 
@@ -59,8 +69,23 @@ console.log(path.join(dirPath, 'index.html'));
 console.log(path.join(dirPath, 'index.js'));
 console.log(path.join(dirPath, 'style.css'));
 
+// 添加路由
+const routerPath = path.join(root, 'src/scripts/router.js');
+const routerContent = fs.readFileSync(routerPath, { encoding: 'utf-8' });
+const newRoute = `{
+    title: '${argv.name}',
+    path: '${argv.route}',
+    src: 'src/pages/${dirName}',
+}];`;
+fs.writeFileSync(routerPath, routerContent.replace('];', newRoute));
+console.log(
+    chalk.green(`\n> Router file ${routerPath} is updated successfully.`)
+);
+
 // 格式化文件
-const commands = [`pnpm exec prettier --write ${path.join(dirPath)}/*`];
+const commands = [
+    `pnpm exec prettier --write ${path.join(dirPath)} ${routerPath}`,
+];
 for (const command of commands) {
     console.log(chalk.green(`\n> Run Command: ${command}`));
     execSync(command, { stdio: [0, 1, 2], cwd: root });

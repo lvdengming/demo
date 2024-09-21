@@ -5,7 +5,7 @@
     "main": "src/index.js",
     "scripts": {
         "prepare": "husky install",
-        "create-page": "cross-env-shell node scripts/create-page.cjs --name $npm_config_name",
+        "create-page": "cross-env-shell node scripts/create-page.cjs --name $npm_config_name --route $npm_config_route",
         "lint": "eslint . --ext .js,.cjs,.mjs,.ts,.cts,.mts --fix --ignore-path .gitignore",
         "format": "prettier **/*.{html,css,js,cjs,json} --write"
     },
