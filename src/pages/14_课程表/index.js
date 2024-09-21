@@ -3,6 +3,13 @@
  * date: 2024-09-21
  */
 
+import { ClientStatus } from '../../scripts/constant.js';
+import { createViewInComputer, queryClientStatus } from '../../scripts/util.js';
+
+if (queryClientStatus() === ClientStatus.MOBILE) {
+    createViewInComputer();
+}
+
 const DRAGGING_OVER_CLASS_NAME = 'dragging-over';
 const container = document.querySelector('#app main');
 let draggedNode;
