@@ -28,17 +28,28 @@ function throttle(fn, timeSpan) {
 
 function createViewInComputer() {
     const section = document.createElement('section');
-    section.innerText = '请在电脑上查看';
     section.style = `
-    display: grid;
-    place-items: center;
-    position: fixed;
-    inset: 0;
-    background-color: #fff;
-    font-size: 20px;
-    color: #303133;
-    z-index: 999;
-  `;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        inset: 0;
+        background-color: #fff;
+        font-size: 20px;
+        color: #303133;
+        z-index: 999;
+    `;
+
+    const img = document.createElement('img');
+    img.src = '../../../assets/view-in-computer.svg';
+    img.style = `
+        width: 50vw;
+        margin-bottom: 16px;
+    `;
+    const span = document.createElement('span');
+    span.textContent = '请在电脑上查看';
+    section.append(img, span);
 
     document.body.append(section);
 }
@@ -54,9 +65,9 @@ function setStyle(strings, ...values) {
 }
 
 export {
-    queryClientStatus,
-    debounce,
-    throttle,
     createViewInComputer,
+    debounce,
+    queryClientStatus,
     setStyle,
+    throttle,
 };
