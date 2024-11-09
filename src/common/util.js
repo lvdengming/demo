@@ -64,9 +64,39 @@ function setStyle(strings, ...values) {
     this.style.cssText += cssText;
 }
 
+/**
+ * 匀速变化动画
+ * @param {number} from 起始值
+ * @param {number} to 目标值
+ * @param {number} duration 动画时间
+ * @param {function(number): void} progressCallback 中间过程的回调函数，该函数接收当前变化的值
+ */
+function linearAnimation(from, to, duration, progressCallback) {
+    const speed = (to - from) / duration;
+    const startTime = Date.now();
+    progressCallback(from);
+
+    const _run = () => {
+        const time = Date.now() - startTime;
+        if (time >= duration) {
+            progressCallback(to);
+            return;
+        }
+
+        const changes = speed * time;
+        const value = from + changes;
+        progressCallback(value);
+
+        requestAnimationFrame(_run);
+    };
+
+    requestAnimationFrame(_run);
+}
+
 export {
     createViewInComputer,
     debounce,
+    linearAnimation,
     queryClientStatus,
     setStyle,
     throttle,

@@ -1,5 +1,5 @@
-import { ClientStatus } from '../../scripts/constant.js';
-import { createViewInComputer, queryClientStatus } from '../../scripts/util.js';
+import { ClientStatus } from '../../common/constant.js';
+import { createViewInComputer, queryClientStatus } from '../../common/util.js';
 
 let carouselTimer;
 let indicator = 1;

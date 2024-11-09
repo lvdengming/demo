@@ -1,9 +1,9 @@
-import { ClientStatus } from '../../scripts/constant.js';
+import { ClientStatus } from '../../common/constant.js';
 import {
+    createViewInComputer,
     debounce,
     queryClientStatus,
-    createViewInComputer,
-} from '../../scripts/util.js';
+} from '../../common/util.js';
 
 let wrapper;
 let scrollbar;

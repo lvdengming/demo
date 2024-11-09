@@ -70,6 +70,11 @@ export const routes = [
         path: 'timetable',
         src: 'src/pages/14_课程表',
     },
+    {
+        title: '数字动画',
+        path: 'number-animation',
+        src: 'src/pages/15_数字动画',
+    },
 ];
 
 export const router = {

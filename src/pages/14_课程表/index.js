@@ -3,8 +3,8 @@
  * date: 2024-09-21
  */
 
-import { ClientStatus } from '../../scripts/constant.js';
-import { createViewInComputer, queryClientStatus } from '../../scripts/util.js';
+import { ClientStatus } from '../../common/constant.js';
+import { createViewInComputer, queryClientStatus } from '../../common/util.js';
 
 if (queryClientStatus() === ClientStatus.MOBILE) {
     createViewInComputer();

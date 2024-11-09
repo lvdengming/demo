@@ -70,7 +70,7 @@ console.log(path.join(dirPath, 'index.js'));
 console.log(path.join(dirPath, 'style.css'));
 
 // 添加路由
-const routerPath = path.join(root, 'src/scripts/router.js');
+const routerPath = path.join(root, 'src/common/router.js');
 const routerContent = fs.readFileSync(routerPath, { encoding: 'utf-8' });
 const newRoute = `{
     title: '${argv.name}',

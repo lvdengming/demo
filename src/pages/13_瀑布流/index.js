@@ -4,7 +4,7 @@
  * description: 基于 IntersectionObserver 实现瀑布流懒加载
  */
 
-import { setStyle } from '../../scripts/util.js';
+import { setStyle } from '../../common/util.js';
 
 const config = {
     ITEMS_COUNT: 100,
