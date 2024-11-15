@@ -1,0 +1,68 @@
+/**
+ * author: lvdengming@foxmail.com
+ * date: 2024-11-15
+ */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --span-size: 16px;
+    --card-height: 100px;
+}
+
+#app {
+    width: 600px;
+    height: calc(100vh - 2 * var(--span-size));
+    padding: var(--span-size);
+    border: 1px solid #ccc;
+    margin: var(--span-size) auto;
+    overflow-y: auto;
+}
+
+#app .card {
+    display: grid;
+    place-items: center;
+    height: var(--card-height);
+    border: 1px solid #ccc;
+    margin-top: var(--span-size);
+    font-size: 20px;
+}
+
+#app .card:first-child {
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    #app {
+        width: calc(100vw - 2 * var(--span-size));
+    }
+}
+
+#app .loading-wrapper {
+    display: grid;
+    place-items: center;
+    margin-top: var(--span-size);
+}
+
+#app .loading-wrapper .loading {
+    width: 28px;
+    height: 28px;
+    border: 4px solid #5f8af7;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: rotate 0.75s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
