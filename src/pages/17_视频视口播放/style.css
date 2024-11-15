@@ -1,0 +1,42 @@
+/**
+ * author: lvdengming@foxmail.com
+ * date: 2024-11-15
+ */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --span-size: 16px;
+    --card-height: 100px;
+}
+
+body {
+    padding: var(--span-size);
+}
+
+.card {
+    display: grid;
+    place-items: center;
+    height: var(--card-height);
+    border: 1px solid #ccc;
+    margin-top: var(--span-size);
+    font-size: 20px;
+}
+
+.card:first-child {
+    margin-top: 0;
+}
+
+.video-wrapper {
+    display: grid;
+    place-items: center;
+    margin-top: var(--span-size);
+}
+
+.video-wrapper video {
+    width: 100%;
+}

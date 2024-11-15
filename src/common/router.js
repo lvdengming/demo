@@ -80,6 +80,11 @@ export const routes = [
         path: 'load-more',
         src: 'src/pages/16_加载更多',
     },
+    {
+        title: '视频视口播放',
+        path: 'video-viewport-play',
+        src: 'src/pages/17_视频视口播放',
+    },
 ];
 
 export const router = {
