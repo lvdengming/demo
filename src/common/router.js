@@ -75,6 +75,11 @@ export const routes = [
         path: 'number-animation',
         src: 'src/pages/15_数字动画',
     },
+    {
+        title: '加载更多',
+        path: 'load-more',
+        src: 'src/pages/16_加载更多',
+    },
 ];
 
 export const router = {
