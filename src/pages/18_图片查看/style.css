@@ -1,0 +1,27 @@
+/**
+ * author: lvdengming@foxmail.com
+ * date: 2025-01-06
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #ccc;
+    margin: 50px auto;
+}
+
+#app img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

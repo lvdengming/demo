@@ -85,6 +85,11 @@ export const routes = [
         path: 'video-viewport-play',
         src: 'src/pages/17_视频视口播放',
     },
+    {
+        title: '图片查看',
+        path: 'img-viewer',
+        src: 'src/pages/18_图片查看',
+    },
 ];
 
 export const router = {
