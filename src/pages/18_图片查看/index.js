@@ -16,7 +16,7 @@ img.addEventListener('load', () => {
 
     // 图片加载完成后，保持图片宽高比在 app 中 object-fit contain 展示
     const { width, height, top, left } = getImgSize();
-    img.style.cssText = `
+    img.style.cssText += `
         top: ${top}px;
         left: ${left}px;
         width: ${width}px;
