@@ -90,6 +90,11 @@ export const routes = [
         path: 'img-viewer',
         src: 'src/pages/18_图片查看',
     },
+    {
+        title: '本地图片预览',
+        path: 'local-imgs-preview',
+        src: 'src/pages/19_本地图片预览',
+    },
 ];
 
 export const router = {

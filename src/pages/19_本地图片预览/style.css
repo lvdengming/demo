@@ -1,0 +1,55 @@
+/**
+ * author: lvdengming@foxmail.com
+ * date: 2025-02-17
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 56px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0 0 16px rgb(0 0 0 / 10%);
+    z-index: 999;
+}
+
+.img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-top: var(--header-height);
+}
+
+.img-item {
+    width: 200px;
+    height: 400px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.img-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 16px rgb(0 0 0 / 10%);
+}
+
+.img-item img {
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+}
