@@ -4,10 +4,17 @@ const fs = require('fs');
 const chalk = require('chalk');
 const argv = require('minimist')(process.argv.slice(2));
 
-if ([argv.name, argv.route].some((s) => s === true)) {
+// 检查命令行参数
+if ([argv.name, argv.route].some((s) => String(s) === 'true')) {
     console.log(
         chalk.red(
-            'In this command, --name option and --route option is required.'
+            'Invalid command, please use the following command to create a new page.\n'
+        )
+    );
+
+    console.log(
+        chalk.green(
+            "pnpm run create-page --name='page_name' --route='page_route'\n\n"
         )
     );
 

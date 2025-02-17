@@ -9,7 +9,7 @@ A personal h5 demos collection.
 pnpm install
 
 # create a page
-pnpm run create-page --name 'page_name' --route 'page_route'
+pnpm run create-page --name='page_name' --route='page_route'
 
 # eslint files
 pnpm run lint
