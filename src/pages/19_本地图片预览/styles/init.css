@@ -1,0 +1,15 @@
+/**
+ * author: lvdengming@foxmail.com
+ * date: 2025-02-17
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #191919;
+    --header-height: 64px;
+}

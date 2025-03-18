@@ -4,18 +4,36 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>本地图片预览</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styles/init.css" />
+        <link rel="stylesheet" href="styles/header.css" />
+        <link rel="stylesheet" href="styles/item.css" />
     </head>
 
     <body>
         <header>
             <div class="action-wrapper">
-                <button id="access-directory">打开本地文件夹</button>
+                <button id="access-directory" class="primary">
+                    打开本地文件夹
+                </button>
                 <button id="clear-imgs">清空图片</button>
+            </div>
+
+            <i class="dividing-line"></i>
+
+            <div class="input-wrapper">
+                <label for="filter">筛选图片</label>
+                <input id="filter" type="text" placeholder="请输入关键词" />
+            </div>
+
+            <i class="dividing-line"></i>
+
+            <div class="input-wrapper">
+                <label for="custom-path">自定义路径</label>
+                <input id="custom-path" type="text" placeholder="请输入规则" />
             </div>
         </header>
         <div class="img-wrapper"></div>
 
-        <script type="module" src="index.js"></script>
+        <script type="module" src="scripts/index.js"></script>
     </body>
 </html>

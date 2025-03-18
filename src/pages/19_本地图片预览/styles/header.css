@@ -1,0 +1,95 @@
+/**
+ * author: lvdengming@foxmail.com
+ * date: 2025-02-17
+ */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    height: var(--header-height);
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0 0 16px rgb(0 0 0 / 10%);
+    z-index: 999;
+}
+
+header .action-wrapper {
+    display: flex;
+}
+
+header button {
+    min-width: 0;
+    height: 32px;
+    padding: 0 24px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-color: #595959;
+    border-radius: 999px;
+    font-size: 12px;
+    color: var(--primary-color);
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.15s;
+}
+
+header button:not(:first-child) {
+    margin-left: 8px;
+}
+
+header button:hover {
+    border-color: #c2c2c2;
+}
+
+header button.primary {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+header button.primary:hover {
+    background-color: #595959;
+    border-color: #595959;
+}
+
+header .dividing-line {
+    width: 1px;
+    height: 20px;
+    background-color: #dedede;
+}
+
+header .input-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+header .input-wrapper label {
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+header input {
+    width: 200px;
+    height: 26px;
+    background-color: transparent;
+    padding: 0 12px;
+    border: 1px solid #c2c2c2;
+    border-radius: 6px;
+    font-size: 12px;
+    color: var(--primary-color);
+    vertical-align: middle;
+    transition: border-color 0.15s;
+    outline: none;
+}
+
+header input:hover,
+header input:focus {
+    border-color: var(--primary-color);
+}
