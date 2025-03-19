@@ -38,10 +38,10 @@ async function AccessLocalDirectory() {
 
                 const p = document.createElement('p');
                 p.textContent = file.name;
+                p.title = `${uri}/${file.name}`;
 
                 const imgItem = document.createElement('div');
                 imgItem.className = IMG_ITEM_CLASS_NAME;
-                imgItem.title = `${uri}/${file.name}`;
                 imgItem.append(img);
                 imgItem.append(p);
 

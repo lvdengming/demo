@@ -12,4 +12,14 @@
 :root {
     --primary-color: #191919;
     --header-height: 64px;
+    --gap-size: 16px;
+    --padding-size: 12px;
+    --font-size-normal: 12px;
+    --font-size-large: 14px;
+    --font-size: var(--font-size-normal);
+    --line-height: 1.5;
+    --item-img-size-small: 100px;
+    --item-img-size-normal: 150px;
+    --item-img-size-large: 200px;
+    --item-img-size: var(--item-img-size-normal);
 }
