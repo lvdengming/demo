@@ -83,7 +83,6 @@
 
     /* 1px 是边框的宽度 */
     top: -1px;
-    right: calc(var(--item-copy-size) - 1px);
     height: var(--item-copy-size);
     background-color: #fff;
     padding: 0 calc((var(--item-copy-size) - var(--item-copy-icon-size)) / 2);
@@ -98,4 +97,5 @@
     text-align: center;
     line-height: 32px;
     box-sizing: border-box;
+    transform: translateX(calc(-100% - 1px));
 }
