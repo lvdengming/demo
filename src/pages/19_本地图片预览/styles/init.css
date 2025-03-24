@@ -22,4 +22,6 @@
     --item-img-size-normal: 150px;
     --item-img-size-large: 200px;
     --item-img-size: var(--item-img-size-normal);
+    --item-copy-size: 32px;
+    --item-copy-icon-size: 20px;
 }

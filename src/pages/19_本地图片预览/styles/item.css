@@ -13,6 +13,7 @@
 }
 
 .img-item {
+    position: relative;
     width: calc(var(--item-img-size) + 2 * var(--padding-size));
     height: calc(
         var(--item-size) + 2 * var(--padding-size) + var(--font-size) *
@@ -26,7 +27,6 @@
 }
 
 .img-item:hover {
-    transform: translateY(-3px);
     box-shadow: 0 0 8px rgb(0 0 0 / 10%);
 }
 
@@ -45,4 +45,57 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.img-item .copy-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: var(--item-copy-size);
+    height: var(--item-copy-size);
+    background-image: url('../imgs/copy.svg');
+    background-size: var(--item-copy-icon-size);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+.img-item:hover .copy-icon {
+    opacity: 1;
+}
+
+.img-item .copy-icon.copied {
+    background-image: url('../imgs/copied.svg');
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    opacity: 1;
+}
+
+.img-item .copy-icon.copied::before {
+    content: 'Copied';
+    position: absolute;
+
+    /* 1px 是边框的宽度 */
+    top: -1px;
+    right: calc(var(--item-copy-size) - 1px);
+    height: var(--item-copy-size);
+    background-color: #fff;
+    padding: 0 calc((var(--item-copy-size) - var(--item-copy-icon-size)) / 2);
+    border: 1px solid #e2e2e2;
+    border-right: none;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 12px;
+    color: #808080;
+    font-style: normal;
+    text-align: center;
+    line-height: 32px;
+    box-sizing: border-box;
 }
