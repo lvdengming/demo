@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>链接跳转拦截</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div id="app">
+            <a
+                href="https://www.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >谷歌</a
+            >
+            <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+            >
+            <a
+                href="https://www.deepseek.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                no-intercept
+                >DeepSeek (不会被拦截)</a
+            >
+        </div>
+
+        <div class="interceptor-wrapper">
+            <div class="interceptor">
+                <div class="interceptor-content">
+                    <p class="title">即将离开当前页面，请注意账号财产安全</p>
+                    <p class="link">/</p>
+                </div>
+
+                <i class="dividing-line"></i>
+
+                <div class="interceptor-action">
+                    <button id="confirm">继续访问</button>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="index.js"></script>
+    </body>
+</html>

@@ -9,7 +9,7 @@ const PATH_ATTRIBUTE = 'to';
 const LOADING_ID = 'loading';
 const IFRAME_ID = 'demo-view';
 const NOT_COMPLETE_ID = 'not-complete';
-const HASH_PREFFIX = '#/';
+const HASH_PREFIX = '#/';
 const GIT_LINK = 'https://github.com/lvdengming/demo/tree/master/';
 
 const demoItems = [];
@@ -64,14 +64,22 @@ function handlePageLoad() {
 }
 
 function handleHashChange() {
-    let path = location.hash.slice(HASH_PREFFIX.length);
-    let index = routes.findIndex((route) => route.path === path);
+    let path = location.hash.slice(HASH_PREFIX.length);
+    const strs = path.split('?');
+    path = strs[0];
+    const query = strs[1];
 
+    let index = routes.findIndex((route) => route.path === path);
     path = index > -1 ? path : routes[0].path;
     index = index > -1 ? index : 0;
 
-    location.hash = HASH_PREFFIX + path;
-    iframe.src = routes[index].src;
+    if (query) {
+        location.hash = `${HASH_PREFIX}${path}?${query}`;
+        iframe.src = `${routes[index].src}/index.html?${query}`;
+    } else {
+        location.hash = HASH_PREFIX + path;
+        iframe.src = routes[index].src;
+    }
 
     if (prevItem) {
         prevItem.classList.remove(ACTIVE_CLASS);
@@ -95,7 +103,7 @@ function handleItemClick(event) {
 
     const currPath = currItem.getAttribute(PATH_ATTRIBUTE);
     const currRoute = routes.find((route) => route.path === currPath);
-    location.hash = HASH_PREFFIX + currPath;
+    location.hash = HASH_PREFIX + currPath;
     iframe.src = currRoute.src;
 
     updatePageState(currRoute);

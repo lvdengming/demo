@@ -95,6 +95,11 @@ export const routes = [
         path: 'local-imgs-preview',
         src: 'src/pages/19_本地图片预览',
     },
+    {
+        title: '链接跳转拦截',
+        path: 'link-interceptor',
+        src: 'src/pages/20_链接跳转拦截',
+    },
 ];
 
 export const router = {

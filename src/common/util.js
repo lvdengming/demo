@@ -93,9 +93,26 @@ function linearAnimation(from, to, duration, progressCallback) {
     requestAnimationFrame(_run);
 }
 
+/**
+ * 获取当前页面的 query 参数
+ * @returns {Object} 包含所有 query 参数的键值对
+ */
+function getQueryParams() {
+    const query = window.location.search;
+    const params = new URLSearchParams(query);
+    const obj = {};
+
+    for (const [key, value] of params.entries()) {
+        obj[key] = value;
+    }
+
+    return obj;
+}
+
 export {
     createViewInComputer,
     debounce,
+    getQueryParams,
     linearAnimation,
     queryClientStatus,
     setStyle,
