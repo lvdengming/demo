@@ -1,7 +1,6 @@
 # System and IDE
 .DS_Store
 .idea
-.vscode
 
 # Project
 node_modules/
